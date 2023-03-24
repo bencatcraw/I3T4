@@ -47,5 +47,6 @@ public class EnemyController : MonoBehaviour
         }
         healthbar.fillAmount = health / maxHealth;
     }
+    
 
 }

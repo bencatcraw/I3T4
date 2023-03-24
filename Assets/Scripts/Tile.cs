@@ -44,11 +44,16 @@ public class Tile : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 1)
         {
-            Instantiate(turret, highlight.transform.position, highlight.transform.rotation);
+            GameObject turretIns = Instantiate(turret, highlight.transform.position, highlight.transform.rotation);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 2)
         {
-            Instantiate(trap, highlight.transform.position, highlight.transform.rotation);
+            GameObject trapIns = Instantiate(trap, highlight.transform.position, highlight.transform.rotation);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            
         }
 
     }

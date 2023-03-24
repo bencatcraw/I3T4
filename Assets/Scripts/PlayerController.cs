@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                collision.gameObject.GetComponentInChildren<Turret>().heat += 1;
+                //collision.gameObject.GetComponentInChildren<Turret>().heat += 1;
             }
         }
     }

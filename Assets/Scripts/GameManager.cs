@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine;
 using System;
 
@@ -8,6 +10,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public GameState State;
+
+    private ColorAdjustments col;
+    public Volume volume;
     private void Awake()
     {
         Instance = this;
@@ -15,10 +20,18 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (volume.profile.TryGet<ColorAdjustments>(out col)){
+            col.postExposure.value = 0;
+            
+        }
         UpdateGameState(GameState.Morning);
+        
+    }
+    private void FixedUpdate()
+    {
+        col.postExposure.value = Mathf.Lerp(0, -3, Time.time / 100);
     }
 
-    
     public void UpdateGameState(GameState newState)
     {
         State = newState;

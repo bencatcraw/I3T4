@@ -65,4 +65,5 @@ public class RangedEnemy : MonoBehaviour
         }
         healthbar.fillAmount = health / maxHealth;
     }
+
 }

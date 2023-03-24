@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3303318864820967868}
   - component: {fileID: 2610678297420793476}
-  - component: {fileID: 1075281428026487928}
   - component: {fileID: 4164193113016152650}
   m_Layer: 2
   m_Name: spawner
@@ -47,25 +46,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2363868, y: 1.6455462, z: 2.443252}
   m_Center: {x: 0.983923, y: -0.79278576, z: -0.02013645}
---- !u!114 &1075281428026487928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776971508024567727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce807e425afe5da44af58fa12c67844a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 2
-  fireTimer: 0
-  damage: 5
-  target: {fileID: 0}
-  maxHeat: 25
-  heat: 25
-  overheatBar: {fileID: 6871399902515766712}
 --- !u!120 &4164193113016152650
 LineRenderer:
   m_ObjectHideFlags: 0

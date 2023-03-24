@@ -5,103 +5,79 @@ using UnityEngine.UI;
 
 public class Turret : MonoBehaviour
 {
-    LineRenderer laser;
-    public float fireRate = 1f;
-    public float fireTimer;
-
-
-    public float damage = 5;
-    List<GameObject> targets = new List<GameObject>();
-    private GameObject target;
     
+    private Transform target;
+    public Transform rotatable;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    [Header("Attributes")]
+    public float range = 15f;
+    public float rotateSpeed = 5f;
+    public float fireRate = 1f;
+    private float fireCount = 0f;
+    private Vector3 defRotation;
 
-    private bool ableToShoot = true;
-    public float maxHeat = 100;
-    public float heat;
-    public Image overheatBar;
-    void Start()
+    private void Start()
     {
-        laser = GetComponent<LineRenderer>();
-        heat = maxHeat;
+        defRotation = rotatable.position;
+        InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void UpdateTarget()
     {
-        if(targets.Count > 0)
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestEnemy = null;
+        foreach(GameObject enemy in enemies)
         {
-            FindClosestEnemy();
+            float distance = Vector3.Distance(transform.position, enemy.transform.position);
+            if(distance < shortestDistance)
+            {
+                shortestDistance = distance;
+                nearestEnemy = enemy;
+            }
+        }
+        if (nearestEnemy != null && shortestDistance <= range)
+        {
+            target = nearestEnemy.transform;
+        }
+    }
+    private void Update()
+    {
+        
+        if (target == null)
+        {
+            Quaternion idleRot = Quaternion.LookRotation(defRotation);
+            Vector3 idle = Quaternion.Lerp(rotatable.rotation,idleRot, Time.deltaTime * rotateSpeed).eulerAngles;
+            rotatable.rotation = Quaternion.Euler(0f,idle.y, 0f);
+            return; 
+        }
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(rotatable.rotation, lookRotation, Time.deltaTime * rotateSpeed).eulerAngles;
+        rotatable.rotation = Quaternion.Euler (0f, rotation.y, 0f);
+
+        if (fireCount <= 0f)
+        {
             Shoot();
+            fireCount = 1f / fireRate;
         }
-        else
-        {
-            laser.SetPosition(0, transform.position);
-            laser.SetPosition(1, transform.position);
-        }
-        UpdateOverheat(maxHeat, heat);
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "enemy")
-        {
-            targets.Add(other.gameObject);
-        }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "enemy")
-        {
-            targets.Remove(other.gameObject);
-        }
+        fireCount -= Time.deltaTime;
     }
-    void FindClosestEnemy()
+    void Shoot()
     {
-        float minDist = Mathf.Infinity;
-            foreach (GameObject enemy in targets)
-            {
-                float dist = Vector3.Distance(enemy.transform.position, transform.position);
-                if (minDist == -1)
-                {
-                    minDist = dist;
-                }
-                if (dist < minDist)
-                {
-                    minDist = dist; 
-                    target = enemy.gameObject;
-                }
-            }
-    }
-    public void Shoot()
-    {
-        laser.SetPosition(0, transform.position);
-        laser.SetPosition(1, target.transform.position);
-        fireTimer += Time.deltaTime;
-        if (fireTimer > 0.5)
-        {
-            heat -= 0.01f;
-        }
-        if (fireTimer > fireRate)
-        {
-            fireTimer = 0;
-            if (target.GetComponent<RangedEnemy>() != null)
-            {
-                target.GetComponentInParent<RangedEnemy>().health -= damage;
-            }
-            else
-            {
-                target.GetComponentInParent<EnemyController>().health -= damage;
-            }
-        }
-    }
-    public void UpdateOverheat(float maxHeat, float heat)
-    {
-        if(heat <= 0)
-        {
-            ableToShoot = false;
-        }
-        overheatBar.fillAmount = heat / maxHeat;
-    }
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
 
-
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
 }
