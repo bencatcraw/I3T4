@@ -9,7 +9,9 @@ public class trap : MonoBehaviour
         if (other.gameObject.tag == "enemy")
         {
             Destroy(this.gameObject);
-            other.GetComponentInParent<EnemyController>().health -= 40;
+            if (other.GetComponent<EnemyController>() != null) { other.GetComponent<EnemyController>().health -= 40; }
+            else if (other.GetComponent<RangedEnemy>() != null) { other.GetComponent<RangedEnemy>().health -= 40; }
+
         }
     }
 

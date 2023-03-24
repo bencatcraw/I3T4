@@ -20,12 +20,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (volume.profile.TryGet<ColorAdjustments>(out col)){
+        if (volume.profile.TryGet<ColorAdjustments>(out col))
+        {
             col.postExposure.value = 0;
-            
+
         }
         UpdateGameState(GameState.Morning);
-        
+
     }
     private void FixedUpdate()
     {
@@ -55,12 +56,12 @@ public class GameManager : MonoBehaviour
         }
     }
     public enum GameState
-{
-    PauseScreen,
-    Morning,
-    Afternoon,
-    NightFight,
-    NightCollect,
-    Lose
-}
+    {
+        PauseScreen,
+        Morning,
+        Afternoon,
+        NightFight,
+        NightCollect,
+        Lose
+    }
 }

@@ -6,17 +6,21 @@ public class RangedEnemy : MonoBehaviour
 {
     public Rigidbody rb;
     public float moveSpeed;
+    private bool moveable = true;
 
     public Transform target;
     private Vector3 moveDir;
     public Transform spawner;
     private LineRenderer renderer;
+    public GameObject obstacle;
 
     public float maxHealth = 15.0f;
     public float health;
     public float maxDist = 5f;
 
     private float dist;
+    public float fireRate = 5f;
+    private float fireCount;
 
     public Image healthbar;
     private Animator animator;
@@ -32,17 +36,18 @@ public class RangedEnemy : MonoBehaviour
     {
         dist = Vector3.Distance(transform.position, target.position);
 
-            Vector3 direction = (target.position - transform.position);
-            moveDir = direction;
+        Vector3 direction = (target.position - transform.position);
+        moveDir = direction;
 
-            Movement();
+        if (moveable == true) { Movement(); }
 
         UpdateHealth(maxHealth, health);
-        
+        fireCount += Time.deltaTime;
     }
     void Movement()
-    {  
-        if(dist > maxDist){
+    {
+        if (dist > maxDist)
+        {
             renderer.SetPosition(0, spawner.position);
             renderer.SetPosition(1, spawner.position);
             rb.velocity = new Vector3(moveDir.x * moveSpeed, rb.velocity.y, moveDir.z * moveSpeed);
@@ -54,8 +59,18 @@ public class RangedEnemy : MonoBehaviour
     }
     void Attack()
     {
-        renderer.SetPosition(0, spawner.position);
-        renderer.SetPosition(1, target.transform.position);
+
+        if (fireCount > fireRate)
+        {
+            Vector3 pos = new Vector3(target.position.x, 0.1f, target.position.z);
+            renderer.SetPosition(0, spawner.position);
+            renderer.SetPosition(1, pos);
+            GameObject obstacleIns = Instantiate(obstacle, pos, Quaternion.identity);
+            Destroy(obstacleIns, 5f);
+            moveable = false;
+            Invoke("stayStill", 2f);
+            fireCount = 0f;
+        }
     }
     public void UpdateHealth(float maxHealth, float health)
     {
@@ -64,6 +79,14 @@ public class RangedEnemy : MonoBehaviour
             Destroy(this.gameObject);
         }
         healthbar.fillAmount = health / maxHealth;
+    }
+    public void stayStill()
+    {
+        renderer.SetPosition(0, spawner.position);
+        renderer.SetPosition(1, spawner.position);
+
+        moveable = true;
+
     }
 
 }

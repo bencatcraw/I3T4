@@ -7,8 +7,8 @@ public class Bullet : MonoBehaviour
 
     public float speed = 70f;
     public float damage = 10f;
-    public GameObject impactEffect; 
-    public void Seek (Transform _target)
+    public GameObject impactEffect;
+    public void Seek(Transform _target)
     {
         target = _target;
     }
@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         float distancePerFrame = speed * Time.deltaTime;
 
-        if(dir.magnitude <= distancePerFrame)
+        if (dir.magnitude <= distancePerFrame)
         {
             HitTarget();
             return;
@@ -33,7 +33,7 @@ public class Bullet : MonoBehaviour
     void HitTarget()
     {
         GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
-        if(target.GetComponent<EnemyController>() != null)
+        if (target.GetComponent<EnemyController>() != null)
         {
             target.GetComponent<EnemyController>().health -= damage;
             Destroy(this.gameObject);
