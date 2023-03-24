@@ -47,13 +47,5 @@ public class EnemyController : MonoBehaviour
         }
         healthbar.fillAmount = health / maxHealth;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "trap")
-        {
-            target = other.transform;
-            this.GetComponent<CapsuleCollider>().isTrigger = true;
-            rb.useGravity = false;
-        }
-    }
+
 }

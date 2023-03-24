@@ -33,4 +33,14 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("X", moveInput.x);
         animator.SetFloat("Y", moveInput.y);
     }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "turret")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                collision.gameObject.GetComponentInChildren<Turret>().heat += 1;
+            }
+        }
+    }
 }

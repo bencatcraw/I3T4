@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class trap : MonoBehaviour
 {
-    private void OnTriggerStay(Collider collision)
+    private void OnTriggerStay(Collider other)
     {
-        if(collision.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "enemy")
         {
-            collision.gameObject.GetComponent<EnemyController>().moveable = false;
-            collision.gameObject.GetComponent<EnemyController>().target = this.transform;
+            Destroy(this.gameObject);
+            other.GetComponentInParent<EnemyController>().health -= 40;
         }
     }
 
