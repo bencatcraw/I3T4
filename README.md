@@ -17,3 +17,13 @@ Left Click - to do wrench attack
 E - to grab
 
 Q - Menu (assuming pause screen)
+
+1 - select a turret
+
+place the turret by left clicking on a tile
+
+when turret is selected, press R to rotate the turret
+
+2 - select a trap
+
+place the trap by left clicking on a tile
