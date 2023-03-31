@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Turret : MonoBehaviour
 {
@@ -10,25 +10,21 @@ public class Turret : MonoBehaviour
     public Transform rotatable;
     public GameObject bulletPrefab;
     public Transform firePoint;
-
-    private bool ableToShoot = true;
-    public float maxHeat = 100;
-    public float heat;
-    public Image overheatBar;
+    public bool ableToShoot = true;
     [Header("Attributes")]
     public float range = 15f;
     public float rotateSpeed = 5f;
     public float fireRate = 1f;
     private float fireCount = 0f;
     private Quaternion defRotation;
-
-
+    
 
     private void Start()
     {
         defRotation = rotatable.transform.rotation;
-        heat = maxHeat;
+        
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        
     }
 
     void UpdateTarget()
@@ -52,7 +48,8 @@ public class Turret : MonoBehaviour
     }
     private void Update()
     {
-        UpdateOverheat(maxHeat, heat);
+        
+        
         if (target == null)
         {
             Vector3 idle = Quaternion.Lerp(rotatable.rotation, defRotation, Time.deltaTime * rotateSpeed).eulerAngles;
@@ -68,9 +65,10 @@ public class Turret : MonoBehaviour
         {
             Shoot();
             fireCount = 1f / fireRate;
-            heat -= 5f;
+            this.gameObject.GetComponent<HeatSystem>().heat -= 5f;
         }
-
+        
+        
         fireCount -= Time.deltaTime;
     }
     void Shoot()
@@ -83,14 +81,8 @@ public class Turret : MonoBehaviour
             bullet.Seek(target);
         }
     }
-    public void UpdateOverheat(float maxHeat, float heat)
-    {
-        if (heat <= 0)
-        {
-            ableToShoot = false;
-        }
-        overheatBar.fillAmount = heat / maxHeat;
-    }
+    
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

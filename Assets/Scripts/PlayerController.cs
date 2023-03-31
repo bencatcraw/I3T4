@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     public Vector2 moveInput;
 
     private Animator animator;
+
+    public int Titanium = 0;
+    public int ScrapMetal = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,14 +37,5 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("X", moveInput.x);
         animator.SetFloat("Y", moveInput.y);
     }
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "turret")
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                //collision.gameObject.GetComponentInChildren<Turret>().heat += 1;
-            }
-        }
-    }
+
 }

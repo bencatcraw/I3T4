@@ -310,6 +310,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2247644955713510693}
   - component: {fileID: 1517715937909959584}
+  - component: {fileID: 1035884985351271795}
+  - component: {fileID: 2139138596322447707}
   m_Layer: 0
   m_Name: turret
   m_TagString: Untagged
@@ -350,12 +352,40 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8041674599686630781, guid: 131fc39495e9cda47b073908b67a3b27,
     type: 3}
   firePoint: {fileID: 1590388223330064402}
-  maxHeat: 100
-  heat: 0
-  overheatBar: {fileID: 3617546171150082959}
+  ableToShoot: 1
   range: 75
   rotateSpeed: 5
   fireRate: 1
+--- !u!114 &1035884985351271795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575164867179147860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc4130b4a2cae7429975e8d141e9748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overheatBar: {fileID: 3617546171150082959}
+  dist: 0
+  maxHeat: 100
+  heat: 0
+  turret: {fileID: 0}
+--- !u!65 &2139138596322447707
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8575164867179147860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 25.91, y: 32.57, z: 23.3}
+  m_Center: {x: 0, y: 3.6, z: 0}
 --- !u!1 &9130568360117480276
 GameObject:
   m_ObjectHideFlags: 0
