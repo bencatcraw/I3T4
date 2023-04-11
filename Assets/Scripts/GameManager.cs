@@ -17,21 +17,22 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
+    public static event Action<GameState> OnGameStateChanged;
     // Start is called before the first frame update
     void Start()
     {
         if (volume.profile.TryGet<ColorAdjustments>(out col))
         {
-            col.postExposure.value = 0;
-
+            col.postExposure.value = 1;
         }
         UpdateGameState(GameState.Morning);
 
     }
     private void FixedUpdate()
     {
-        col.postExposure.value = Mathf.Lerp(0, -3, Time.time / 100);
     }
+        
+    
 
     public void UpdateGameState(GameState newState)
     {
@@ -42,26 +43,28 @@ public class GameManager : MonoBehaviour
             case GameState.PauseScreen:
                 break;
             case GameState.Morning:
-                break;
+                    col.postExposure.value = 1;
+                    break;
             case GameState.Afternoon:
-                break;
-            case GameState.NightFight:
-                break;
-            case GameState.NightCollect:
-                break;
+                    col.postExposure.value = 0;
+                    break;
+            case GameState.Night:
+                    col.postExposure.value = -3;
+                    break;
             case GameState.Lose:
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
+        OnGameStateChanged?.Invoke(newState);
     }
+    
     public enum GameState
     {
         PauseScreen,
         Morning,
         Afternoon,
-        NightFight,
-        NightCollect,
+        Night,
         Lose
     }
 }
