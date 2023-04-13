@@ -34,9 +34,10 @@ public class RangedEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        renderer.SetPosition(0, spawner.position);
         dist = Vector3.Distance(transform.position, target.position);
 
-        Vector3 direction = (target.position - transform.position);
+        Vector3 direction = (target.position - transform.position).normalized;
         moveDir = direction;
 
         if (moveable == true) { Movement(); }
@@ -48,7 +49,7 @@ public class RangedEnemy : MonoBehaviour
     {
         if (dist > maxDist)
         {
-            renderer.SetPosition(0, spawner.position);
+            
             renderer.SetPosition(1, spawner.position);
             rb.velocity = new Vector3(moveDir.x * moveSpeed, rb.velocity.y, moveDir.z * moveSpeed);
         }
@@ -63,11 +64,12 @@ public class RangedEnemy : MonoBehaviour
         if (fireCount > fireRate)
         {
             Vector3 pos = new Vector3(target.position.x, 0.1f, target.position.z);
-            renderer.SetPosition(0, spawner.position);
+            
             renderer.SetPosition(1, pos);
             GameObject obstacleIns = Instantiate(obstacle, pos, Quaternion.identity);
             Destroy(obstacleIns, 5f);
             moveable = false;
+            rb.isKinematic = true;
             Invoke("stayStill", 2f);
             fireCount = 0f;
         }
@@ -82,9 +84,9 @@ public class RangedEnemy : MonoBehaviour
     }
     public void stayStill()
     {
-        renderer.SetPosition(0, spawner.position);
+        
         renderer.SetPosition(1, spawner.position);
-
+        rb.isKinematic = false;
         moveable = true;
 
     }

@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5171437881754949826}
-  moveSpeed: 0.1
+  moveSpeed: 10
   moveable: 1
   target: {fileID: 0}
   maxHealth: 50

@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
         if (moveable == true)
         {
 
-            Vector3 direction = (target.position - transform.position);
+            Vector3 direction = (target.position - transform.position).normalized;
             moveDir = direction;
 
             Movement();

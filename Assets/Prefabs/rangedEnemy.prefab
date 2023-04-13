@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6418296398819904316}
-  moveSpeed: 0.1
+  moveSpeed: 10
   target: {fileID: 0}
   spawner: {fileID: 6418296398251876072}
   obstacle: {fileID: 8448340015531260284, guid: f278db3ef48928f4abb22a4b11071bc6,

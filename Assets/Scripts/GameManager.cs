@@ -7,8 +7,9 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject Grid;
     public static GameManager Instance;
-
+    
     public GameState State;
 
     private ColorAdjustments col;
@@ -28,11 +29,24 @@ public class GameManager : MonoBehaviour
         UpdateGameState(GameState.Morning);
 
     }
-    private void FixedUpdate()
+    void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(State == GameState.Morning) 
+            {
+                UpdateGameState(GameState.Afternoon);
+                Grid.SetActive(true);
+            }
+            else if (State == GameState.Afternoon) 
+            {
+                UpdateGameState(GameState.Night);
+                Grid.SetActive(false);
+            }
+        }
     }
-        
-    
+
+
 
     public void UpdateGameState(GameState newState)
     {
@@ -40,8 +54,6 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
-            case GameState.PauseScreen:
-                break;
             case GameState.Morning:
                     col.postExposure.value = 1;
                     break;
@@ -61,7 +73,6 @@ public class GameManager : MonoBehaviour
     
     public enum GameState
     {
-        PauseScreen,
         Morning,
         Afternoon,
         Night,

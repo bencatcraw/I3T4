@@ -10,6 +10,7 @@ public class HeatSystem : MonoBehaviour
     private GameObject player;
     public float maxHeat = 100;
     public float heat;
+    public float repairAmt = 5;
     public Turret turret;
     // Start is called before the first frame update
     private void Start()
@@ -38,7 +39,7 @@ public class HeatSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && inRange == true)
         {
-            heat += 1;
+            heat += repairAmt;
         }
     }
     public void UpdateOverheat(float maxHeat, float heat)
