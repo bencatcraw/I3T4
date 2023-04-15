@@ -48,28 +48,30 @@ public class Turret : MonoBehaviour
     }
     private void Update()
     {
-        
-        
-        if (target == null)
+        if (ableToShoot == true)
         {
-            Vector3 idle = Quaternion.Lerp(rotatable.rotation, defRotation, Time.deltaTime * rotateSpeed).eulerAngles;
-            rotatable.rotation = Quaternion.Euler(0f, idle.y, 0f);
-            return;
-        }
-        Vector3 dir = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(rotatable.rotation, lookRotation, Time.deltaTime * rotateSpeed).eulerAngles;
-        rotatable.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
-        if (fireCount <= 0f)
-        {
-            Shoot();
-            fireCount = 1f / fireRate;
-            this.gameObject.GetComponent<HeatSystem>().heat -= 5f;
+            if (target == null)
+            {
+                Vector3 idle = Quaternion.Lerp(rotatable.rotation, defRotation, Time.deltaTime * rotateSpeed).eulerAngles;
+                rotatable.rotation = Quaternion.Euler(0f, idle.y, 0f);
+                return;
+            }
+            Vector3 dir = target.position - transform.position;
+            Quaternion lookRotation = Quaternion.LookRotation(dir);
+            Vector3 rotation = Quaternion.Lerp(rotatable.rotation, lookRotation, Time.deltaTime * rotateSpeed).eulerAngles;
+            rotatable.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+            if (fireCount <= 0f)
+            {
+                Shoot();
+                fireCount = 1f / fireRate;
+                this.gameObject.GetComponent<HeatSystem>().heat -= 5f;
+            }
+
+
+            fireCount -= Time.deltaTime;
         }
-        
-        
-        fireCount -= Time.deltaTime;
     }
     void Shoot()
     {

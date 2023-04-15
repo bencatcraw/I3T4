@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private int width, height, offset;
+    [SerializeField] private float width, height, offset;
     
     [SerializeField] private Tile tilePrefab;
     public GameObject TileHolder;
@@ -15,9 +15,9 @@ public class GridManager : MonoBehaviour
     }
     void GenerateGrid()
     {
-        for(int x = 0; x < width; x+=offset)
+        for(float x = 0; x < width; x+=offset)
         {
-            for (int y = 0; y < height; y+=offset)
+            for (float y = 0; y < height; y+=offset)
             {
                 var spawnedTile = Instantiate(tilePrefab, new Vector3(x, tilePrefab.transform.position.y, y), tilePrefab.transform.rotation);
                 spawnedTile.name = $"Tile {x} {y}";

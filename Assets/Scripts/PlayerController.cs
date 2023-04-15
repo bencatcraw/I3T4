@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public int Titanium = 0;
     public int ScrapMetal = 0;
 
+    public float PlayerHealth = 100;
     // Start is called before the first frame update
     void Start()
     {

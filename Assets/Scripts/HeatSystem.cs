@@ -48,6 +48,10 @@ public class HeatSystem : MonoBehaviour
         {
             turret.ableToShoot = false;
         }
+        else
+        {
+            turret.ableToShoot = true;
+        }
         overheatBar.fillAmount = heat / maxHeat;
     }
 

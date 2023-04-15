@@ -8,6 +8,7 @@ using System;
 public class GameManager : MonoBehaviour
 {
     public GameObject Grid;
+    public GameObject EnemySpawner;
     public static GameManager Instance;
     
     public GameState State;
@@ -56,12 +57,14 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Morning:
                     col.postExposure.value = 1;
+                    EnemySpawner.SetActive(false);
                     break;
             case GameState.Afternoon:
                     col.postExposure.value = 0;
                     break;
             case GameState.Night:
                     col.postExposure.value = -3;
+                    EnemySpawner.SetActive(true);
                     break;
             case GameState.Lose:
                 break;

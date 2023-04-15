@@ -67,9 +67,9 @@ public class RangedEnemy : MonoBehaviour
             
             renderer.SetPosition(1, pos);
             GameObject obstacleIns = Instantiate(obstacle, pos, Quaternion.identity);
-            Destroy(obstacleIns, 5f);
+            Destroy(obstacleIns, 2f);
             moveable = false;
-            rb.isKinematic = true;
+            
             Invoke("stayStill", 2f);
             fireCount = 0f;
         }
@@ -86,7 +86,7 @@ public class RangedEnemy : MonoBehaviour
     {
         
         renderer.SetPosition(1, spawner.position);
-        rb.isKinematic = false;
+        
         moveable = true;
 
     }
