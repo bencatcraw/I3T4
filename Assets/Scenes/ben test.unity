@@ -1778,7 +1778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2128888241
 Transform:
   m_ObjectHideFlags: 0
@@ -1810,10 +1810,12 @@ MonoBehaviour:
     type: 3}
   enemyPrefab2: {fileID: 5171437881754949830, guid: d7151d93a67586948a6677f2013c14eb,
     type: 3}
-  numEnemiesInWave: 5
+  numEnemiesInWave: 3
   spawnRadius: 300
-  timeBetweenWaves: 20
+  timeBetweenWaves: 5
   minDistanceBetweenEnemies: 20
+  startedSpawning: 0
+  currentNight: 0
 --- !u!1001 &1249789407545110141
 PrefabInstance:
   m_ObjectHideFlags: 0
