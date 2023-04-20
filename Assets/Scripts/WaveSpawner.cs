@@ -10,17 +10,24 @@ public class WaveSpawner : MonoBehaviour
     public float spawnRadius = 5f;
     public float timeBetweenWaves = 5f;
     public float minDistanceBetweenEnemies = 1f;
+    public bool wavesCleared = false;
 
     private int currentWave = 1;
-
+    private int maxWaves;
+    public int currentNight = 0;
     void Start()
     {
+        //StartCoroutine(SpawnEnemies());
+    }
+    void increaseNight()
+    {
+        currentNight += 1;
         StartCoroutine(SpawnEnemies());
     }
-
     IEnumerator SpawnEnemies()
     {
-        while (true)
+        maxWaves = currentNight;
+        while (currentWave <= maxWaves)
         {
             int numEnemiesToSpawn = numEnemiesInWave * currentWave;
             for (int i = 0; i < numEnemiesToSpawn; i++)
@@ -59,11 +66,18 @@ public class WaveSpawner : MonoBehaviour
                     }
                 }
 
-                Instantiate(enemyPrefab, spawnPosition3D, enemyPrefab.transform.rotation);
+                GameObject enemyIns = Instantiate(enemyPrefab, spawnPosition3D, enemyPrefab.transform.rotation);
+                enemyIns.transform.parent = transform;
                 yield return new WaitForSeconds(0.5f);
             }
-
+            
             currentWave++;
+
+            if (transform.childCount <= 0)
+            {
+                wavesCleared = true;
+                currentWave = 1;
+            }
             yield return new WaitForSeconds(timeBetweenWaves);
         }
     }

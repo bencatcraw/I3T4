@@ -31,7 +31,11 @@ public class GameManager : MonoBehaviour
 
     }
     void Update()
-    {
+    {   if (EnemySpawner.GetComponent<WaveSpawner>().wavesCleared == true && State == GameState.Night)
+        {
+            UpdateGameState(GameState.Morning);
+            EnemySpawner.GetComponent<WaveSpawner>().wavesCleared = false;
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if(State == GameState.Morning) 
@@ -47,7 +51,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    
 
     public void UpdateGameState(GameState newState)
     {
@@ -65,6 +69,7 @@ public class GameManager : MonoBehaviour
             case GameState.Night:
                     col.postExposure.value = -3;
                     EnemySpawner.SetActive(true);
+                EnemySpawner.GetComponent<WaveSpawner>().Invoke("increaseNight", 0);
                     break;
             case GameState.Lose:
                 break;
