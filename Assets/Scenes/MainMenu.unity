@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a134087581bd34683ebbaac8e6a039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pause: {fileID: 0}
 --- !u!1 &568473536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1582,16 +1583,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'W - move up
+  m_text: 'W - Move Up
 
-    A- move left
+    A- Move Left
 
-    S - move down
+    S - Move Down
 
-    D - move right
+    D - Move Right
 
-    Q
-    - pause/resume game'
+    ESC
+    - Pause/Resume Game'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

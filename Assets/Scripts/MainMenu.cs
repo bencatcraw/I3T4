@@ -23,7 +23,14 @@ public class MainMenu : MonoBehaviour
         {
             pause.enabled = true;
         }
-        
+        if (sceneName == "ben test" && pause.enabled)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
     public void GoToMainMenu()
     {
