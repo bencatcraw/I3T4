@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1468808414713045965}
-  - component: {fileID: 7217577919600058647}
+  - component: {fileID: 3676649032041050373}
   m_Layer: 0
   m_Name: collider
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,8 +32,8 @@ Transform:
   m_Father: {fileID: 6418296398819904319}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
---- !u!65 &7217577919600058647
-BoxCollider:
+--- !u!136 &3676649032041050373
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -42,9 +42,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.7513275, y: 6.2098737, z: 3.7934265}
-  m_Center: {x: -0.11365509, y: -0.053658724, z: -0.9728012}
+  m_Radius: 4.07
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6418296398014899740
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,13 +431,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6418296398819904312}
   serializedVersion: 2
-  m_Mass: 150
+  m_Mass: 1000
   m_Drag: 1
   m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &6418296398819904317
 MonoBehaviour:

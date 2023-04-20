@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public int ScrapMetal = 0;
 
     public float PlayerHealth = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+ 
         moveInput.x = Input.GetAxis("Horizontal");
         moveInput.y = Input.GetAxis("Vertical");
         //moveInput.Normalize();

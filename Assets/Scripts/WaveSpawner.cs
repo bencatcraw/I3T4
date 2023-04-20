@@ -36,7 +36,7 @@ public class WaveSpawner : MonoBehaviour
                 }
 
                 float angle = Random.Range(0f, Mathf.PI * 2f);
-                Vector3 spawnPosition3D = transform.position + new Vector3(Mathf.Sin(angle) * spawnRadius, 20f, Mathf.Cos(angle) * spawnRadius);
+                Vector3 spawnPosition3D = transform.position + new Vector3(Mathf.Sin(angle) * spawnRadius, transform.position.y, Mathf.Cos(angle) * spawnRadius);
 
                 // Check distance from other enemies
                 bool tooClose = true;
@@ -55,7 +55,7 @@ public class WaveSpawner : MonoBehaviour
                     if (tooClose)
                     {
                         angle = Random.Range(0f, Mathf.PI * 2f);
-                        spawnPosition3D = transform.position + new Vector3(Mathf.Sin(angle) * spawnRadius, 20f, Mathf.Cos(angle) * spawnRadius);
+                        spawnPosition3D = transform.position + new Vector3(Mathf.Sin(angle) * spawnRadius, transform.position.y, Mathf.Cos(angle) * spawnRadius);
                     }
                 }
 
