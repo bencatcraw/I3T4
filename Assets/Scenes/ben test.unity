@@ -1213,7 +1213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1483631834
 Transform:
   m_ObjectHideFlags: 0
@@ -2771,6 +2771,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1687113260}
+    - target: {fileID: 8582191958035320296, guid: ac5c6c7edd6cfb641adf55260268f46b,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582191958035320296, guid: ac5c6c7edd6cfb641adf55260268f46b,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582191958035320296, guid: ac5c6c7edd6cfb641adf55260268f46b,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582191958035320296, guid: ac5c6c7edd6cfb641adf55260268f46b,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8582191958927231056, guid: ac5c6c7edd6cfb641adf55260268f46b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2780,6 +2800,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582191959190249340, guid: ac5c6c7edd6cfb641adf55260268f46b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8582191959190249341, guid: ac5c6c7edd6cfb641adf55260268f46b,
         type: 3}
