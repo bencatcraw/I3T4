@@ -91,6 +91,10 @@ public class GameManager : MonoBehaviour
                 col.postExposure.value = 0;
                     break;
             case GameState.Night:
+                foreach (GameObject ore in ores)
+                {
+                    ore.SetActive(false);
+                }
                 agogo.Stop();
                 if (Random.Range(0, 2) == 0)
                 {

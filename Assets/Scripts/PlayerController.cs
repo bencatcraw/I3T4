@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private AudioSource walkingSound;
+    [SerializeField] private AudioSource hurtSound;
 
     public Rigidbody rb;
     public float moveSpeed;
@@ -49,6 +50,10 @@ public class PlayerController : MonoBehaviour
         
         animator.SetFloat("X", moveInput.x);
         animator.SetFloat("Y", moveInput.y);
+    }
+    void Hurt()
+    {
+        hurtSound.Play();
     }
 
 }

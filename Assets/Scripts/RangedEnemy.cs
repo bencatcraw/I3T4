@@ -87,7 +87,7 @@ public class RangedEnemy : MonoBehaviour
     }
     public void stayStill()
     {
-        
+        laserShoot.Play();
         renderer.SetPosition(1, spawner.position);
         
         moveable = true;

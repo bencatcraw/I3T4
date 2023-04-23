@@ -346,8 +346,8 @@ GameObject:
   - component: {fileID: 6418296398819904316}
   - component: {fileID: 6418296398819904317}
   - component: {fileID: 6418296398819904306}
-  - component: {fileID: 4353303649929397484}
   - component: {fileID: 8624896615980739977}
+  - component: {fileID: 4429280919954022369}
   m_Layer: 0
   m_Name: rangedEnemy
   m_TagString: enemy
@@ -454,9 +454,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserCharge: {fileID: 8624896615980739977}
-  laserShoot: {fileID: 4353303649929397484}
+  laserShoot: {fileID: 4429280919954022369}
   rb: {fileID: 6418296398819904316}
-  moveSpeed: 10
+  moveSpeed: 15
   target: {fileID: 0}
   spawner: {fileID: 6418296398251876072}
   obstacle: {fileID: 8448340015531260284, guid: f278db3ef48928f4abb22a4b11071bc6,
@@ -565,7 +565,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!82 &4353303649929397484
+--- !u!82 &8624896615980739977
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -575,9 +575,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6c671071f96c36241b1685f209e2ee6b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 30548cbefe5b03e4bbbe1a8674aa97de, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.116
+  m_Volume: 0.223
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -661,7 +661,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &8624896615980739977
+--- !u!82 &4429280919954022369
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -671,9 +671,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 30548cbefe5b03e4bbbe1a8674aa97de, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6c671071f96c36241b1685f209e2ee6b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.073
+  m_Volume: 0.116
   m_Pitch: 1
   Loop: 0
   Mute: 0
