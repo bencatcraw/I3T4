@@ -1,0 +1,1036 @@
+fileFormatVersion: 2
+guid: f13f722313040874aab210b9f67622aa
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: droidWalkFinal_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3602
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5210e345f75d9df42a4075927eeda94f
+      internalID: -408470989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_1
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 3607
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2726ab9c6838d134aafc58c49da2f834
+      internalID: -2142823129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_2
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 3602
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e884ca7e5f397d43824dd62624552f2
+      internalID: 796647089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_3
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 3602
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6109a8d685743c64ea9dc084864157ff
+      internalID: 1964814792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_4
+      rect:
+        serializedVersion: 2
+        x: 3708
+        y: 3605
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c37bfc402265084c9cab0b2e420ef8e
+      internalID: 646105695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_5
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 3605
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1c5e21a4f0bc641ac6e90e0fa8f317
+      internalID: -22173135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_6
+      rect:
+        serializedVersion: 2
+        x: 5423
+        y: 3605
+        width: 769
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3975af1c3c1a24590115c5887a5a6f
+      internalID: -1354201053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_7
+      rect:
+        serializedVersion: 2
+        x: 6393
+        y: 3605
+        width: 784
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507114a55c712ce41b7f08c2ba3b27dc
+      internalID: -579064342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2702
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41bbf545cc1e9e4588fb7d33d40773c
+      internalID: -1727769709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_9
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 2702
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279ec154413e5394fa4985c397615d1f
+      internalID: 2042742060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_10
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 2702
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6c8dd4b71d1124fa3676582ad08bb1
+      internalID: 1051007004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_11
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 2702
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972727c0f6090014a9118e5cc7a19501
+      internalID: -1327106172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_12
+      rect:
+        serializedVersion: 2
+        x: 3708
+        y: 2705
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a5dfa3198eb2ce4292cc7952732f6c9
+      internalID: -2030626463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_13
+      rect:
+        serializedVersion: 2
+        x: 4598
+        y: 2830
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f088f7c3d0b09c1418c0b52e10704242
+      internalID: 1653100426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_14
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2705
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f246df21382a15444989da335afb4ead
+      internalID: -1970695615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_15
+      rect:
+        serializedVersion: 2
+        x: 5423
+        y: 2705
+        width: 769
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafa6d98f38d7f84abeb7ee40b37d2ea
+      internalID: 1171467182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_16
+      rect:
+        serializedVersion: 2
+        x: 6393
+        y: 2705
+        width: 784
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467902b8153d1524fb0ba787f333c2b3
+      internalID: 1892954521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_17
+      rect:
+        serializedVersion: 2
+        x: 4598
+        y: 2802
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cadd7f5c602314a9c61e75ae57aad6
+      internalID: 996903083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1802
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fff25de5a4993499186a5c30fa2439
+      internalID: -188821137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_19
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 1802
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12823a9190045e40b06bd4e173979ae
+      internalID: 613131091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_20
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 1802
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36207bb123f04624c993abe0f38764ef
+      internalID: -1451637002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_21
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 1802
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e254659153f48564190cbc5e91fd57f9
+      internalID: -483682041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_22
+      rect:
+        serializedVersion: 2
+        x: 3708
+        y: 1805
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a112336966ff71741bb27c4d6dee4440
+      internalID: 166677319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_23
+      rect:
+        serializedVersion: 2
+        x: 4598
+        y: 1930
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ce31b66df48924486b30a61814986f
+      internalID: -232622515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_24
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1805
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d791dfe9a10eb449eb5c8a1a955499
+      internalID: 1343226241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_25
+      rect:
+        serializedVersion: 2
+        x: 5423
+        y: 1805
+        width: 769
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c189c1ecb2b671e48b696b1cc2c51233
+      internalID: -1658134293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_26
+      rect:
+        serializedVersion: 2
+        x: 6393
+        y: 1805
+        width: 784
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555bb579270640a40a66fe735d7f3583
+      internalID: 71858798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_27
+      rect:
+        serializedVersion: 2
+        x: 4598
+        y: 1902
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb92b978b7a07ba48a2d85a1f0400bac
+      internalID: 1477060963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_28
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 902
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc6b693fdaaadd4c86101e5c2339617
+      internalID: -1720452428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_29
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 902
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff942ec84441904dadd2c0f00b0b326
+      internalID: 1838914476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_30
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 902
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37bf2b6eeb9bbf43982580c89ce3b5f
+      internalID: -1378982421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_31
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 902
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3766af7237c36a4392872e991d1802e
+      internalID: -1320676971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_32
+      rect:
+        serializedVersion: 2
+        x: 3708
+        y: 905
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39df9e53444ef164786cdf1888b71db8
+      internalID: 566991960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_33
+      rect:
+        serializedVersion: 2
+        x: 4598
+        y: 1030
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc1ad340255c0746a0315e404ddca4a
+      internalID: -615417046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_34
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 905
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc09f482eb084874996d8a52b8a464e9
+      internalID: -910829940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_35
+      rect:
+        serializedVersion: 2
+        x: 5423
+        y: 905
+        width: 769
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e537883393ad6cc439de4e83e5aea7a6
+      internalID: 1341004094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_36
+      rect:
+        serializedVersion: 2
+        x: 6393
+        y: 905
+        width: 784
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfccd681406844345af9e567fc0a6ce8
+      internalID: -103445658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_37
+      rect:
+        serializedVersion: 2
+        x: 4598
+        y: 1002
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5feb75f7fbf93ba4480a135a010db5f8
+      internalID: -528578854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_38
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 2
+        width: 886
+        height: 893
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f694447cb7db0d49afff95931d51078
+      internalID: 1212704202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_39
+      rect:
+        serializedVersion: 2
+        x: 3708
+        y: 5
+        width: 699
+        height: 788
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040b0f18e1a71944580dab5d1aafc7e0
+      internalID: -391962810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droidWalkFinal_40
+      rect:
+        serializedVersion: 2
+        x: 6393
+        y: 5
+        width: 784
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845276f88a0edf34bab3cc5d4ae335a3
+      internalID: -1256233333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b8d707c450c2cc844b4d0e9f51a25dd2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      droidWalkFinal_31: -1320676971
+      droidWalkFinal_3: 1964814792
+      droidWalkFinal_9: 2042742060
+      droidWalkFinal_37: -528578854
+      droidWalkFinal_11: -1327106172
+      droidWalkFinal_28: -1720452428
+      droidWalkFinal_0: -408470989
+      droidWalkFinal_23: -232622515
+      droidWalkFinal_12: -2030626463
+      droidWalkFinal_27: 1477060963
+      droidWalkFinal_21: -483682041
+      droidWalkFinal_38: 1212704202
+      droidWalkFinal_8: -1727769709
+      droidWalkFinal_13: 1653100426
+      droidWalkFinal_15: 1171467182
+      droidWalkFinal_20: -1451637002
+      droidWalkFinal_5: -22173135
+      droidWalkFinal_35: 1341004094
+      droidWalkFinal_7: -579064342
+      droidWalkFinal_30: -1378982421
+      droidWalkFinal_26: 71858798
+      droidWalkFinal_17: 996903083
+      droidWalkFinal_18: -188821137
+      droidWalkFinal_4: 646105695
+      droidWalkFinal_6: -1354201053
+      droidWalkFinal_36: -103445658
+      droidWalkFinal_1: -2142823129
+      droidWalkFinal_2: 796647089
+      droidWalkFinal_40: -1256233333
+      droidWalkFinal_32: 566991960
+      droidWalkFinal_25: -1658134293
+      droidWalkFinal_14: -1970695615
+      droidWalkFinal_10: 1051007004
+      droidWalkFinal_33: -615417046
+      droidWalkFinal_24: 1343226241
+      droidWalkFinal_34: -910829940
+      droidWalkFinal_22: 166677319
+      droidWalkFinal_19: 613131091
+      droidWalkFinal_16: 1892954521
+      droidWalkFinal_29: 1838914476
+      droidWalkFinal_39: -391962810
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
