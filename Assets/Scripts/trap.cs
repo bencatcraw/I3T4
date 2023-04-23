@@ -22,8 +22,8 @@ public class trap : MonoBehaviour
             animator.SetBool("resetting", false);
             animator.SetBool("triggered", true);
                 closed = true;
-                if (other.GetComponent<EnemyController>() != null) { other.GetComponent<EnemyController>().health -= 1000; }
-                else if (other.GetComponent<RangedEnemy>() != null) { other.GetComponent<RangedEnemy>().health -= 1000; }
+                if (other.GetComponentInParent<EnemyController>()) { other.GetComponentInParent<EnemyController>().health -= 1000; }
+                else if (other.GetComponentInParent<RangedEnemy>()) { other.GetComponentInParent<RangedEnemy>().health -= 1000; }
 
             }
         

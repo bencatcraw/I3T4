@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private ColorAdjustments col;
     public Volume volume;
+    private GameObject[] ores;
     private void Awake()
     {
         Instance = this;
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ores = GameObject.FindGameObjectsWithTag("Titanium");
         if (volume.profile.TryGet<ColorAdjustments>(out col))
         {
             col.postExposure.value = 1;
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
         {
             if(State == GameState.Morning) 
             {
+
                 UpdateGameState(GameState.Afternoon);
                 Grid.SetActive(true);
             }
@@ -63,15 +66,21 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
-            case GameState.Morning:
-                    col.postExposure.value = 1;
+            case GameState.Morning: 
+                foreach (GameObject ore in ores)
+                {
+                    ore.SetActive(true);
+                    ore.GetComponent<ResourceManager>().oreMax += 2;
+                    ore.GetComponent<ResourceManager>().oreAmt = ore.GetComponent<ResourceManager>().oreMax;
+                }
+                col.postExposure.value = 1;
                     EnemySpawner.SetActive(false);
                     break;
             case GameState.Afternoon:
                     col.postExposure.value = 0;
                     break;
             case GameState.Night:
-                    col.postExposure.value = -3;
+                    col.postExposure.value = -2;
                     EnemySpawner.SetActive(true);
                     EnemySpawner.GetComponent<WaveSpawner>().Invoke("increaseNight", 0);
                     break;
