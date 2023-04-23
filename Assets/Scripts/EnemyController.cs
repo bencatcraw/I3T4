@@ -13,13 +13,16 @@ public class EnemyController : MonoBehaviour
 
     public float maxHealth = 15.0f;
     public float health;
+    public float damage = 10f;
+    public float atkSpeed = 1f;
 
+    private float atkTime;
     public Image healthbar;
     private Animator animator;
     private void Start()
     {
         animator = GetComponent<Animator>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = GameObject.FindGameObjectWithTag("base").transform;
         health = maxHealth;
     }
     // Update is called once per frame
@@ -34,6 +37,7 @@ public class EnemyController : MonoBehaviour
             Movement();
         }
         UpdateHealth(maxHealth, health);
+        atkTime += Time.deltaTime;
     }
     void Movement()
     {
@@ -48,5 +52,15 @@ public class EnemyController : MonoBehaviour
         healthbar.fillAmount = health / maxHealth;
     }
 
-
+    private void OnTriggerStay(Collider collision)
+    {
+        if (atkTime > atkSpeed)
+        {
+            if (collision.gameObject.tag == "base")
+            {
+                target.GetComponent<HomeBase>().health -= damage;
+            }
+            atkTime = 0;
+        }
+    }
 }

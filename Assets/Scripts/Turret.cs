@@ -66,7 +66,7 @@ public class Turret : MonoBehaviour
             {
                 Shoot();
                 fireCount = 1f / fireRate;
-                this.gameObject.GetComponent<HeatSystem>().heat -= 5f;
+                if (this.gameObject.GetComponent<HeatSystem>()) { this.gameObject.GetComponent<HeatSystem>().heat -= 5f; }
             }
 
 

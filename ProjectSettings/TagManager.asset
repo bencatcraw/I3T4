@@ -8,6 +8,8 @@ TagManager:
   - trap
   - turret
   - bullet
+  - base
+  - Titanium
   layers:
   - Default
   - TransparentFX
