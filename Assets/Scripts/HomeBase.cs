@@ -8,6 +8,7 @@ public class HomeBase : MonoBehaviour
     public float maxHealth;
     public Image healthbar;
 
+    public Canvas gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class HomeBase : MonoBehaviour
     {
         if (health <= 0)
         {
+            gameOver.enabled = true;
             Destroy(this.gameObject);
         }
         healthbar.fillAmount = health / maxHealth;

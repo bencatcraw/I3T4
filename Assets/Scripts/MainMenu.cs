@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public Canvas pause;
+    public Canvas gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class MainMenu : MonoBehaviour
         {
             Time.timeScale = 0;
         }
-        else
+        else if (gameOver == null || gameOver.enabled == false)
         {
             Time.timeScale = 1;
         }

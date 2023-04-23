@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private AudioSource walkingSound;
     [SerializeField] private AudioSource hurtSound;
+    [SerializeField] private AudioSource dieSound;
 
     public Rigidbody rb;
     public float moveSpeed;
@@ -19,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     public float PlayerHealth = 100;
 
+    public SpriteRenderer rendere;
+    public Canvas gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +33,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(PlayerHealth <= 0)
+        {
+            Time.timeScale = 0;
+            rendere.enabled = false;
+            gameOver.enabled = true;
+
+        }
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             walkingSound.UnPause();
@@ -53,7 +64,15 @@ public class PlayerController : MonoBehaviour
     }
     void Hurt()
     {
-        hurtSound.Play();
+        if (PlayerHealth <= 0)
+        {
+            dieSound.Play();
+        }
+        else
+        {
+            hurtSound.Play();
+        }
+            
     }
 
 }
