@@ -86,15 +86,15 @@ public class GameManager : MonoBehaviour
                     EnemySpawner.SetActive(false);
                     break;
             case GameState.Afternoon:
+                foreach (GameObject ore in ores)
+                {
+                    ore.SetActive(false);
+                }
                 trong.Stop();
                 agogo.Play();
                 col.postExposure.value = 0;
                     break;
             case GameState.Night:
-                foreach (GameObject ore in ores)
-                {
-                    ore.SetActive(false);
-                }
                 agogo.Stop();
                 if (Random.Range(0, 2) == 0)
                 {
