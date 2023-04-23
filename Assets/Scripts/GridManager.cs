@@ -27,13 +27,13 @@ public class GridManager : MonoBehaviour
     }
     private void Update()
     {
-      /*  if (Input.GetKeyDown(KeyCode.T) && TileHolder.activeSelf == false)
+        if (Input.GetKeyDown(KeyCode.T) && TileHolder.activeSelf == false)
         {
             TileHolder.SetActive(true);
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
             TileHolder.SetActive(false);
-        }*/
+        }
     }
 }

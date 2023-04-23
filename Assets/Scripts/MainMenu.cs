@@ -20,11 +20,11 @@ public class MainMenu : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        if (sceneName == "ben test" && Input.GetKeyDown(KeyCode.Escape))
+        if (sceneName == "Game" && Input.GetKeyDown(KeyCode.Escape))
         {
             pause.enabled = true;
         }
-        if (sceneName == "ben test" && pause.enabled)
+        if (sceneName == "Game" && pause.enabled)
         {
             Time.timeScale = 0;
         }
@@ -39,7 +39,7 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("ben test");
+        SceneManager.LoadScene("Game");
     }
 
 }
