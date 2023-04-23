@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            walkingSound.Play();
+            walkingSound.UnPause();
         } else
         {
             walkingSound.Pause();

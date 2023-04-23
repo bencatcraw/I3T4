@@ -4,9 +4,15 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine;
 using System;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private AudioSource trong;
+    [SerializeField] private AudioSource action;
+    [SerializeField] private AudioSource night;
+    [SerializeField] private AudioSource agogo;
+
     public GameObject Grid;
     public GameObject EnemySpawner;
     public static GameManager Instance;
@@ -66,7 +72,10 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
-            case GameState.Morning: 
+            case GameState.Morning:
+                action.Stop();
+                night.Stop();
+                trong.Play();
                 foreach (GameObject ore in ores)
                 {
                     ore.SetActive(true);
@@ -77,14 +86,26 @@ public class GameManager : MonoBehaviour
                     EnemySpawner.SetActive(false);
                     break;
             case GameState.Afternoon:
-                    col.postExposure.value = 0;
+                trong.Stop();
+                agogo.Play();
+                col.postExposure.value = 0;
                     break;
             case GameState.Night:
+                agogo.Stop();
+                if (Random.Range(0, 2) == 0)
+                {
+                    action.Play();
+                } else
+                {
+                    night.Play();
+                }
                     col.postExposure.value = -2;
                     EnemySpawner.SetActive(true);
                     EnemySpawner.GetComponent<WaveSpawner>().Invoke("increaseNight", 0);
                     break;
             case GameState.Lose:
+                action.Stop();
+                night.Stop();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
