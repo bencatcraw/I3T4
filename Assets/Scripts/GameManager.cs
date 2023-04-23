@@ -80,7 +80,11 @@ public class GameManager : MonoBehaviour
                     col.postExposure.value = 0;
                     break;
             case GameState.Night:
-                    col.postExposure.value = -2;
+                foreach (GameObject ore in ores)
+                {
+                    ore.SetActive(false);
+                }
+                col.postExposure.value = -2;
                     EnemySpawner.SetActive(true);
                     EnemySpawner.GetComponent<WaveSpawner>().Invoke("increaseNight", 0);
                     break;

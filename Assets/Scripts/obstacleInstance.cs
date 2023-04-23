@@ -10,6 +10,7 @@ public class obstacleInstance : MonoBehaviour
     private float enterTime;
     public float maxDist = 15f;
     public bool damaged;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -22,6 +23,7 @@ public class obstacleInstance : MonoBehaviour
         {
             damaged = true;
             player.GetComponent<PlayerController>().PlayerHealth -= damage;
+            player.GetComponent<PlayerController>().Invoke("Hurt", 0f);
         }
     }
 }

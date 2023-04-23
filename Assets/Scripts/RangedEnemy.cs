@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class RangedEnemy : MonoBehaviour
 {
+    [SerializeField] private AudioSource laserCharge;
+    [SerializeField] private AudioSource laserShoot;
+
     public Rigidbody rb;
     public float moveSpeed;
     private bool moveable = true;
@@ -64,7 +67,7 @@ public class RangedEnemy : MonoBehaviour
         if (fireCount > fireRate)
         {
             Vector3 pos = new Vector3(target.position.x, 0.1f, target.position.z);
-            
+            laserCharge.Play();
             renderer.SetPosition(1, pos);
             GameObject obstacleIns = Instantiate(obstacle, pos, Quaternion.identity);
             Destroy(obstacleIns, 2f);

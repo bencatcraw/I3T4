@@ -17,8 +17,8 @@ public class Turret : MonoBehaviour
     public float fireRate = 1f;
     private float fireCount = 0f;
     private Quaternion defRotation;
-    
 
+    [SerializeField] private AudioSource turShoot;
     private void Start()
     {
         defRotation = rotatable.transform.rotation;
@@ -77,7 +77,7 @@ public class Turret : MonoBehaviour
     {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
-
+        turShoot.Play();
         if (bullet != null)
         {
             bullet.Seek(target);

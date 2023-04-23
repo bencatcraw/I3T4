@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private AudioSource walkingSound;
-
+    [SerializeField] private AudioSource hurtSound;
     public Rigidbody rb;
     public float moveSpeed;
 
@@ -30,12 +30,12 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            walkingSound.Play();
-        } else
+            walkingSound.UnPause();
+        }
+        else
         {
             walkingSound.Pause();
         }
-        
         moveInput.x = Input.GetAxis("Horizontal");
         moveInput.y = Input.GetAxis("Vertical");
         //moveInput.Normalize();
@@ -46,9 +46,13 @@ public class PlayerController : MonoBehaviour
     void Movement()
     {
         rb.velocity = new Vector3(moveInput.x * moveSpeed, rb.velocity.y, moveInput.y * moveSpeed);
-        
+
         animator.SetFloat("X", moveInput.x);
         animator.SetFloat("Y", moveInput.y);
+    }
+    void Hurt()
+    {
+        hurtSound.Play();
     }
 
 }
