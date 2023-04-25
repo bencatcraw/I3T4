@@ -22,7 +22,14 @@ public class MainMenu : MonoBehaviour
 
         if (sceneName != "MainMenu" && Input.GetKeyDown(KeyCode.Escape))
         {
-            pause.enabled = true;
+            if(pause.enabled)
+            {
+                pause.enabled = false;
+            }
+            else
+            {
+                pause.enabled = true;
+            }
         }
         if (sceneName != "MainMenu" && pause.enabled)
         {
