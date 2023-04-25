@@ -42,6 +42,8 @@ public class EnemyController : MonoBehaviour
     void Movement()
     {
         rb.velocity = new Vector3(moveDir.x * moveSpeed, rb.velocity.y, moveDir.z * moveSpeed);
+        animator.SetFloat("X", rb.velocity.normalized.x);
+        animator.SetFloat("Y", rb.velocity.normalized.z);
     }
     public void UpdateHealth(float maxHealth, float health)
     {

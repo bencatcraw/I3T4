@@ -10,12 +10,14 @@ public class RangedEnemy : MonoBehaviour
     public Rigidbody rb;
     public float moveSpeed;
     private bool moveable = true;
+    private bool abletoShoot;
 
     public Transform target;
     private Vector3 moveDir;
     public Transform spawner;
     private LineRenderer renderer;
     public GameObject obstacle;
+
 
     public float maxHealth = 15.0f;
     public float health;
@@ -27,6 +29,14 @@ public class RangedEnemy : MonoBehaviour
 
     public Image healthbar;
     private Animator animator;
+    float animX;
+    float animY;
+
+
+    [SerializeField] private Transform downLeftSpawn;
+    [SerializeField] private Transform downRightSpawn;
+    [SerializeField] private Transform upLeftSpawn;
+    [SerializeField] private Transform upRightSpawn;
     private void Start()
     {
         renderer = GetComponent<LineRenderer>();
@@ -34,47 +44,73 @@ public class RangedEnemy : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         health = maxHealth;
     }
-    // Update is called once per frame
+
     void Update()
     {
+
         renderer.SetPosition(0, spawner.position);
         dist = Vector3.Distance(transform.position, target.position);
 
         Vector3 direction = (target.position - transform.position).normalized;
         moveDir = direction;
 
-        if (moveable == true) { Movement(); }
+        Movement();
 
         UpdateHealth(maxHealth, health);
         fireCount += Time.deltaTime;
+        moveLaser();
     }
     void Movement()
     {
-        if (dist > maxDist)
+        if (moveable == true)
         {
             
             renderer.SetPosition(1, spawner.position);
             rb.velocity = new Vector3(moveDir.x * moveSpeed, rb.velocity.y, moveDir.z * moveSpeed);
+            if (dist < maxDist)
+            {
+                Attack();
+            }
         }
-        else
-        {
-            Attack();
-        }
+
+        animator.SetFloat("X", rb.velocity.normalized.x);
+        animator.SetFloat("Y", rb.velocity.normalized.z);
     }
     void Attack()
     {
-
         if (fireCount > fireRate)
         {
-            Vector3 pos = new Vector3(target.position.x, 0.1f, target.position.z);
+            animator.enabled = false;
+            moveable = false;
+            Vector3 pos = new Vector3(target.position.x, target.position.y - 8f, target.position.z);
             laserCharge.Play();
             renderer.SetPosition(1, pos);
             GameObject obstacleIns = Instantiate(obstacle, pos, Quaternion.identity);
             Destroy(obstacleIns, 2f);
-            moveable = false;
-            
             Invoke("stayStill", 2f);
-            fireCount = 0f;
+            
+        }
+
+    }
+    void moveLaser()
+    {
+        animX = animator.GetFloat("X");
+        animY = animator.GetFloat("Y");
+        if (animX < 0 && animY < 0)
+        {
+            spawner.position = downLeftSpawn.position;
+        }
+        if (animX > 0 && animY < 0)
+        {
+            spawner.position = downRightSpawn.position;
+        }
+        if (animX < 0 && animY > 0)
+        {
+            spawner.position = upLeftSpawn.position;
+        }
+        if (animX > 0 && animY > 0)
+        {
+            spawner.position = upRightSpawn.position;
         }
     }
     public void UpdateHealth(float maxHealth, float health)
@@ -87,11 +123,12 @@ public class RangedEnemy : MonoBehaviour
     }
     public void stayStill()
     {
+        fireCount = 0f;
         laserShoot.Play();
         renderer.SetPosition(1, spawner.position);
-        
-        moveable = true;
 
+        moveable = true;
+        animator.enabled = true;
     }
 
 }
