@@ -9,6 +9,7 @@ public class HomeBase : MonoBehaviour
     public Image healthbar;
 
     public Canvas gameOver;
+    [SerializeField] private GameObject hbase;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class HomeBase : MonoBehaviour
         if (health <= 0)
         {
             gameOver.enabled = true;
-            Destroy(this.gameObject);
+            Destroy(hbase);
         }
         healthbar.fillAmount = health / maxHealth;
     }

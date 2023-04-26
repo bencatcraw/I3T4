@@ -102,18 +102,282 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: borbSpritesFinal_0
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 3610
+        width: 1181
+        height: 1565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b261933b27c6a4982dc681520c7d04
+      internalID: -899065181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_1
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 3610
+        width: 1176
+        height: 1565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26b49c7adf9b5743b33ff65ac4bda4f
+      internalID: 530453780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_2
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 3610
+        width: 1371
+        height: 1550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23a015033bcb414a94a736b10c2e3a2
+      internalID: -1439188582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_3
+      rect:
+        serializedVersion: 2
+        x: 5661
+        y: 3610
+        width: 1255
+        height: 1550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34024875b738f5a47bfb01e7abc74793
+      internalID: 1880531877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_4
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1807
+        width: 1049
+        height: 1476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e464f12021a60894c926d7463cb01091
+      internalID: -1418185557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_5
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1807
+        width: 1113
+        height: 1476
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4c950e52ef98b48bd560f280147a3b
+      internalID: 526546309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_6
+      rect:
+        serializedVersion: 2
+        x: 3942
+        y: 1807
+        width: 1065
+        height: 1470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63beee481216ac442ae1f36a279dd693
+      internalID: 1923271567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_7
+      rect:
+        serializedVersion: 2
+        x: 5793
+        y: 1807
+        width: 1012
+        height: 1470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a25474b14eeff4da1519eac4c191b7
+      internalID: 2063358876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_8
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 8
+        width: 1144
+        height: 1566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df7248146b06364181ece2f0e666c40
+      internalID: -1011176688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_9
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 8
+        width: 1176
+        height: 1566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527979e79da80714aa529cee916185f3
+      internalID: -311590061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_10
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 8
+        width: 1371
+        height: 1550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f7d31a53b09b2f4eb560d59d5a7dd1d
+      internalID: -284521290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: borbSpritesFinal_11
+      rect:
+        serializedVersion: 2
+        x: 5661
+        y: 8
+        width: 1260
+        height: 1550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e609e56346a434591e4683410b9fc3
+      internalID: 73303870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f37863a1e4a05574f8e75b1b3bae244b
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      borbSpritesFinal_3: 1880531877
+      borbSpritesFinal_11: 73303870
+      borbSpritesFinal_1: 530453780
+      borbSpritesFinal_9: -311590061
+      borbSpritesFinal_7: 2063358876
+      borbSpritesFinal_6: 1923271567
+      borbSpritesFinal_8: -1011176688
+      borbSpritesFinal_0: -899065181
+      borbSpritesFinal_5: 526546309
+      borbSpritesFinal_4: -1418185557
+      borbSpritesFinal_2: -1439188582
+      borbSpritesFinal_10: -284521290
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

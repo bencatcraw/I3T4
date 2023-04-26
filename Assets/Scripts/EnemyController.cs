@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
     private float atkTime;
     public Image healthbar;
     private Animator animator;
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
