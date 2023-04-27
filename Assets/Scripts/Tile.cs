@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] private GameObject highlight, turHigh, trapHigh, defHigh;
+    [SerializeField] private GameObject highlight, turHigh, trapHigh, defHigh, delHigh;
     public GameObject turret, trap;
     public int selected;
+    private bool placed;
+    private GameObject trapIns;
+    private GameObject turretIns;
     // Start is called before the first frame update
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && selected != 1)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && selected != 1 && placed == false)
         {
             highlight.SetActive(false);
             selected = 1;
@@ -22,7 +25,7 @@ public class Tile : MonoBehaviour
             selected = 0;
             highlight = defHigh;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && selected != 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && selected != 2 && placed == false)
         {
             highlight.SetActive(false);
             selected = 2;
@@ -34,6 +37,19 @@ public class Tile : MonoBehaviour
             selected = 0;
             highlight = defHigh;
         }
+        if (Input.GetKeyDown(KeyCode.Alpha3) && selected != 3)
+        {
+            highlight.SetActive(false);
+            selected = 3;
+            highlight = delHigh;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            highlight.SetActive(false);
+            selected = 0;
+            highlight = defHigh;
+        }
+
     }
     private void OnMouseOver()
     {
@@ -45,16 +61,37 @@ public class Tile : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 1)
         {
-            GameObject turretIns = Instantiate(turret, highlight.transform.position, highlight.transform.rotation);
+            turretIns = Instantiate(turret, highlight.transform.position, highlight.transform.rotation);
             this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            selected = 0;
+            highlight.SetActive(false);
+            highlight = defHigh;
+            highlight.SetActive(true);
+            placed = true;
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 2)
         {
-            GameObject trapIns = Instantiate(trap, highlight.transform.position, highlight.transform.rotation);
+            trapIns = Instantiate(trap, highlight.transform.position, highlight.transform.rotation);
             this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            selected = 0;
+            highlight.SetActive(false);
+            highlight = defHigh;
+            highlight.SetActive(true);
+            placed = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 3)
+        {
+            if(turretIns != null)
+            {
+                Destroy(turretIns);
+            }
+            else if (trapIns != null)
+            {
+                Destroy(trapIns);
+            }
 
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            placed = false;
         }
 
     }

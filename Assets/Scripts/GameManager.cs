@@ -4,63 +4,67 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine;
 using System;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private AudioSource trong;
+    [SerializeField] private AudioSource action;
+    [SerializeField] private AudioSource night;
+    [SerializeField] private AudioSource agogo;
+
+    public GameObject Grid;
+    public GameObject EnemySpawner;
     public static GameManager Instance;
-
+    
     public GameState State;
-
-    public Canvas screen;
-    private bool isPaused;
 
     private ColorAdjustments col;
     public Volume volume;
+    private GameObject[] ores;
     private void Awake()
     {
         Instance = this;
     }
+    public static event Action<GameState> OnGameStateChanged;
     // Start is called before the first frame update
     void Start()
     {
-        // like Minecraft, 0 ticks means it's dawn
+        ores = GameObject.FindGameObjectsWithTag("Titanium");
         if (volume.profile.TryGet<ColorAdjustments>(out col))
         {
-            col.postExposure.value = 0;
-
+            col.postExposure.value = 1;
         }
-        // game state starts in the morning
         UpdateGameState(GameState.Morning);
-        // pause screen is not visible at the start of game
-        isPaused = false;
-        screen.enabled = false;
+
     }
-    // made Update function so that the pause screen would actually work
-    void Update() 
-    {
-        // toggle pause screen
-        if (Input.GetKeyDown(KeyCode.Q)) {
-            
-            if (!isPaused)   { 
-                UpdateGameState(GameState.PauseScreen); 
-                isPaused = true;
-            } else { 
+    void Update()
+    {   if (EnemySpawner.GetComponent<WaveSpawner>().startedSpawning == true)
+        {if(EnemySpawner.transform.childCount <= 0)
+            {
                 UpdateGameState(GameState.Morning);
-                isPaused = false; 
+                EnemySpawner.GetComponent<WaveSpawner>().startedSpawning = false;
+            }
+            
+           
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(State == GameState.Morning) 
+            {
+
+                UpdateGameState(GameState.Afternoon);
+                Grid.SetActive(true);
+            }
+            else if (State == GameState.Afternoon) 
+            {
+                UpdateGameState(GameState.Night);
+                Grid.SetActive(false);
             }
         }
     }
-    private void FixedUpdate()
-    {
-        // changes from day time to night time in a long while
-        col.postExposure.value = Mathf.Lerp(0, -3, Time.time / 100);
-        // current state is Morning
-        Debug.Log(State);
 
-        
-    }
+    
 
     public void UpdateGameState(GameState newState)
     {
@@ -68,55 +72,56 @@ public class GameManager : MonoBehaviour
 
         switch (newState)
         {
-            case GameState.PauseScreen:
-                // when pause screen is enabled, time stops
-                screen.enabled = true;
-                Time.timeScale = 0f;
-                break;
             case GameState.Morning:
-                // when pause screen is disabled, time resumes
-                screen.enabled = false;
-                Time.timeScale = 1f;
-                break;
+                action.Stop();
+                night.Stop();
+                trong.Play();
+                foreach (GameObject ore in ores)
+                {
+                    ore.SetActive(true);
+                    ore.GetComponent<ResourceManager>().oreMax += 2;
+                    ore.GetComponent<ResourceManager>().oreAmt = ore.GetComponent<ResourceManager>().oreMax;
+                }
+                col.postExposure.value = 1;
+                    EnemySpawner.SetActive(false);
+                    break;
             case GameState.Afternoon:
-                break;
-            case GameState.NightFight:
-                break;
-            case GameState.NightCollect:
-                break;
+                foreach (GameObject ore in ores)
+                {
+                    ore.SetActive(false);
+                }
+                trong.Stop();
+                agogo.Play();
+                col.postExposure.value = 0;
+                    break;
+            case GameState.Night:
+                agogo.Stop();
+                if (Random.Range(0, 2) == 0)
+                {
+                    action.Play();
+                } else
+                {
+                    night.Play();
+                }
+                    col.postExposure.value = -2;
+                    EnemySpawner.SetActive(true);
+                    EnemySpawner.GetComponent<WaveSpawner>().Invoke("increaseNight", 0);
+                    break;
             case GameState.Lose:
+                action.Stop();
+                night.Stop();
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
+        OnGameStateChanged?.Invoke(newState);
     }
+    
     public enum GameState
     {
-        PauseScreen,
         Morning,
         Afternoon,
-        NightFight,
-        NightCollect,
+        Night,
         Lose
-    }
-    public void ResumeGame()
-    {
-        UpdateGameState(GameState.Morning);
-        isPaused = false;
-
-        /*
-            // if we use this code, then the pause functionality may not be consistent
-            // when pause screen is disabled, time resumes
-            screen.enabled = false;
-            Time.timeScale = 1f;
-        */
-    }
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-    public void StartGame() 
-    {
-        SceneManager.LoadScene("ben test");
     }
 }

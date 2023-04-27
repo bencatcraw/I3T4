@@ -104,7 +104,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2863534656030056665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.44}
+  m_LocalPosition: {x: 0, y: 0, z: 0.28}
   m_LocalScale: {x: 0.0071895006, y: 0.0071895006, z: 0.2503212}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -114,7 +114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.33, y: -4.54}
+  m_AnchoredPosition: {x: 0.03, y: 5.36}
   m_SizeDelta: {x: 1101, y: 518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2939294295538148030
@@ -205,7 +205,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5171437881754949830}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 5.8, y: -122.48826, z: 48.58188}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
@@ -275,7 +275,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5171437881754949830}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 200
   m_Drag: 1
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -296,11 +296,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5171437881754949826}
-  moveSpeed: 0.1
+  moveSpeed: 15
   moveable: 1
   target: {fileID: 0}
   maxHealth: 50
   health: 15
+  damage: 10
+  atkSpeed: 1
   healthbar: {fileID: 7035279356729474832}
 --- !u!95 &2074631359181302231
 Animator:
@@ -409,10 +411,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6665631524479830088}
-  - component: {fileID: 4147527588104952036}
+  - component: {fileID: 6721257335391895630}
   m_Layer: 0
   m_Name: collider
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,8 +434,8 @@ Transform:
   m_Father: {fileID: 5171437881754949828}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
---- !u!65 &4147527588104952036
-BoxCollider:
+--- !u!136 &6721257335391895630
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -442,6 +444,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.46527, y: 7.627861, z: 10.363472}
-  m_Center: {x: -0.22110686, y: -0.40656155, z: 0.25776544}
+  m_Radius: 3
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

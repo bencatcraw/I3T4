@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8448340015531260281}
   - component: {fileID: 8448340015531260282}
   - component: {fileID: 8448340015531260283}
+  - component: {fileID: 9171318790216998410}
+  - component: {fileID: 5887655632014244344}
   m_Layer: 0
   m_Name: laserObstacle
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8448340015531260284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 349.92, y: 0.1, z: 354.67}
-  m_LocalScale: {x: 26.824121, y: -0.25995517, z: 26.824121}
+  m_LocalScale: {x: 26, y: -0.25, z: 26}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,3 +100,38 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!95 &9171318790216998410
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448340015531260284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fde25e7a70316ef41bdf310bcf466c12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5887655632014244344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448340015531260284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1bf11d5a6708240b6eebc75eba7b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dist: 0
+  maxDist: 15
+  damaged: 0
