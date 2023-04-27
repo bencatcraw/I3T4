@@ -367,6 +367,10 @@ MonoBehaviour:
   turret: {fileID: 6725228221612686651, guid: f10db58861982d248b4f7501bb4acdaf, type: 3}
   trap: {fileID: 5251145417109667333, guid: 86db976adf6eb214db7d6b6f1a28cb8c, type: 3}
   selected: 0
+  TurrCostTitanium: 10
+  TurrCostScrap: 5
+  TrapCostTitanium: 5
+  TrapCostScrap: 2
 --- !u!65 &2780618201846943576
 BoxCollider:
   m_ObjectHideFlags: 0

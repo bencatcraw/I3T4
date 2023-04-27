@@ -590,6 +590,8 @@ MonoBehaviour:
   spawner: {fileID: 6418296398251876072}
   obstacle: {fileID: 8448340015531260284, guid: f278db3ef48928f4abb22a4b11071bc6,
     type: 3}
+  deadBody: {fileID: 8498130052984687430, guid: e4d64d6bec16cee4f912a15fa6c403e1,
+    type: 3}
   maxHealth: 30
   health: 0
   maxDist: 100

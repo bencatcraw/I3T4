@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class PlayerController : MonoBehaviour
 
     public int Titanium = 0;
     public int ScrapMetal = 0;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI TitaniumText;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI ScrapText;
 
     public float PlayerHealth = 100;
     private float maxHealth;
@@ -69,6 +74,8 @@ public class PlayerController : MonoBehaviour
             gameOver.enabled = true;
         }
         healthbar.fillAmount = health / maxHealth;
+        TitaniumText.text = "Titanium: " + Titanium;
+        ScrapText.text = "Scrap Metal: " + ScrapMetal;
     }
     void Hurt()
     {

@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
     private float atkTime;
     public Image healthbar;
     private Animator animator;
-    
+    public GameObject deadBody;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -50,6 +50,7 @@ public class EnemyController : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(deadBody, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
         healthbar.fillAmount = health / maxHealth;

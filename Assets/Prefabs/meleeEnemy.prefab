@@ -304,6 +304,8 @@ MonoBehaviour:
   damage: 10
   atkSpeed: 1
   healthbar: {fileID: 7035279356729474832}
+  deadBody: {fileID: 8498130052984687430, guid: e4d64d6bec16cee4f912a15fa6c403e1,
+    type: 3}
 --- !u!95 &2074631359181302231
 Animator:
   serializedVersion: 4

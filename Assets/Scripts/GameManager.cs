@@ -4,6 +4,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine;
 using System;
+using TMPro;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
     private ColorAdjustments col;
     public Volume volume;
     private GameObject[] ores;
+    private int dayCounter = 0;
+    public TMPro.TextMeshProUGUI statusText;
     private void Awake()
     {
         Instance = this;
@@ -73,6 +76,8 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.Morning:
+                dayCounter += 1;
+                statusText.text = "Morning: " + dayCounter;
                 action.Stop();
                 night.Stop();
                 trong.Play();
@@ -86,6 +91,7 @@ public class GameManager : MonoBehaviour
                     EnemySpawner.SetActive(false);
                     break;
             case GameState.Afternoon:
+                statusText.text = "Afternoon: " + dayCounter;
                 foreach (GameObject ore in ores)
                 {
                     ore.SetActive(false);
@@ -95,6 +101,7 @@ public class GameManager : MonoBehaviour
                 col.postExposure.value = 0;
                     break;
             case GameState.Night:
+                statusText.text = "Night: " + dayCounter;
                 agogo.Stop();
                 if (Random.Range(0, 2) == 0)
                 {

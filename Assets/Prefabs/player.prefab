@@ -111,6 +111,8 @@ MonoBehaviour:
   moveInput: {x: 0, y: 0}
   Titanium: 0
   ScrapMetal: 0
+  TitaniumText: {fileID: 0}
+  ScrapText: {fileID: 0}
   PlayerHealth: 100
   rendere: {fileID: 1249789408178229631}
   gameOver: {fileID: 0}

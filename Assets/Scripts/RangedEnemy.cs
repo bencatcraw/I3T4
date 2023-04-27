@@ -17,7 +17,7 @@ public class RangedEnemy : MonoBehaviour
     public Transform spawner;
     private LineRenderer renderer;
     public GameObject obstacle;
-
+    public GameObject deadBody;
 
     public float maxHealth = 15.0f;
     public float health;
@@ -117,6 +117,7 @@ public class RangedEnemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(deadBody, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
         healthbar.fillAmount = health / maxHealth;

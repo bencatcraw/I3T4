@@ -10,6 +10,7 @@ TagManager:
   - bullet
   - base
   - Titanium
+  - HUD
   layers:
   - Default
   - TransparentFX
