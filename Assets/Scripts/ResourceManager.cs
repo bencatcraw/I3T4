@@ -20,10 +20,10 @@ public class ResourceManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && inRange == true)
         {
-            if(ResourceType == "ScrapMetal")
+            if(ResourceType == "Scrap")
             {
-                player.GetComponent<PlayerController>().ScrapMetal += 1;
                 Destroy(this.gameObject);
+                player.GetComponent<PlayerController>().ScrapMetal += 1;
             }
             if (ResourceType == "Titanium")
             {
@@ -34,7 +34,7 @@ public class ResourceManager : MonoBehaviour
     }
     private void Update()
     {
-        if (ResourceType == "Titanium") { UpdateOreBar(oreAmt, oreMax); }
+        
             dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist <= 30)
         {
@@ -44,6 +44,7 @@ public class ResourceManager : MonoBehaviour
         {
             inRange = false;
         }
+        if (ResourceType == "Titanium") { UpdateOreBar(oreAmt, oreMax); }
     }
 
     public void UpdateOreBar(float curOre, float maxOre)

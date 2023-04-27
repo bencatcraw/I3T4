@@ -114,6 +114,7 @@ MonoBehaviour:
   PlayerHealth: 100
   rendere: {fileID: 1249789408178229631}
   gameOver: {fileID: 0}
+  healthbar: {fileID: 0}
 --- !u!54 &1249789408178229624
 Rigidbody:
   m_ObjectHideFlags: 0
