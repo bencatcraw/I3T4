@@ -184,8 +184,8 @@ MonoBehaviour:
   m_text: There are 3 stages to this game. Morning, Afternoon, and Night. You can
     advance to the next time during the game by pressing Space ----->
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -209,13 +209,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 165.4
+  m_fontSize: 169.75
   m_fontSizeBase: 160.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -790,6 +790,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &329610051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 438247145212082025, guid: fddcc5071da016542bc689bde2f4bdd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 634721092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &348737974
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,8 +864,8 @@ MonoBehaviour:
     machines to protect you and your base. Walk up to this ore and click on it mine.
     --->
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -877,13 +889,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 160.25
+  m_fontSize: 161.55
   m_fontSizeBase: 160.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -988,8 +1000,8 @@ MonoBehaviour:
   m_text: Welcome to the Mars Mech Mission tutorial! You can start by moving around
     using WASD or the arrow keys. ------>
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1019,7 +1031,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1124,8 +1136,8 @@ MonoBehaviour:
   m_text: After the Night, you want to get gathering resources again, but also repairing
     and resetting your buildings.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1155,7 +1167,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1199,6 +1211,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424000442}
   m_CullTransparentMesh: 1
+--- !u!114 &504382985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 438247144061766274, guid: fddcc5071da016542bc689bde2f4bdd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 634721092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &555277098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,8 +1284,8 @@ MonoBehaviour:
   m_text: Thats it for the tutorial. Press ESC to play or return to the main menu.
     Good luck!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1291,7 +1315,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1346,6 +1370,98 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Play Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247143829175817, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247143829175817, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 45430e0266ca0114392f87f52bcf568d,
+        type: 2}
+    - target: {fileID: 438247143829175817, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247143829175817, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4772004172354728510, guid: 45430e0266ca0114392f87f52bcf568d,
+        type: 2}
+    - target: {fileID: 438247143829175818, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -4.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247143829175818, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247143829175819, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Name
+      value: Text (Resume)
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247143944854295, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 504382985}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 438247144061766275, guid: fddcc5071da016542bc689bde2f4bdd1,
         type: 3}
@@ -1489,6 +1605,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
         type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 329610051}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145212082026, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 192199852}
@@ -1500,13 +1666,62 @@ PrefabInstance:
     - target: {fileID: 438247145365770036, guid: fddcc5071da016542bc689bde2f4bdd1,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 308.5
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 438247145365770043, guid: fddcc5071da016542bc689bde2f4bdd1,
         type: 3}
       propertyPath: m_text
       value: Tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 438247145365770043, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 45430e0266ca0114392f87f52bcf568d,
+        type: 2}
+    - target: {fileID: 438247145365770043, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4772004172354728510, guid: 45430e0266ca0114392f87f52bcf568d,
+        type: 2}
+    - target: {fileID: 438247145385247288, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145385247288, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145385247289, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_Name
+      value: Text (MM)
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145385247295, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145385247295, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 45430e0266ca0114392f87f52bcf568d,
+        type: 2}
+    - target: {fileID: 438247145385247295, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 438247145385247295, guid: fddcc5071da016542bc689bde2f4bdd1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4772004172354728510, guid: 45430e0266ca0114392f87f52bcf568d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fddcc5071da016542bc689bde2f4bdd1, type: 3}
 --- !u!1 &653268981
@@ -2156,8 +2371,8 @@ MonoBehaviour:
     1 and 2 to switch between buildings. R to rotate and click to place. Building
     will expend resources. ------>
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2181,13 +2396,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 151.15
+  m_fontSize: 161.55
   m_fontSizeBase: 160.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2292,8 +2507,8 @@ MonoBehaviour:
   m_text: If you want to delete a building press 3. However, removing a already placed
     building will refund you only half the resources!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2317,13 +2532,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 171.8
+  m_fontSize: 186.7
   m_fontSizeBase: 160.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2935,8 +3150,8 @@ MonoBehaviour:
   m_text: Walk up to the turret and click on it to repair. Do the same for the trap
     to reset it by clicking it on the center pad. --->
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2960,13 +3175,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 185.95
+  m_fontSize: 186.7
   m_fontSizeBase: 160.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3380,8 +3595,8 @@ MonoBehaviour:
   m_text: This is your Base. It has a turret on top of it. If your character or your
     Base die, Game Over. Protect it at all costs. ->
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3411,7 +3626,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3949,8 +4164,8 @@ MonoBehaviour:
     your base. The more you progress, the more will attack. Night can not be skipped
     and all enemies must die before it becomes day.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3974,13 +4189,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 141.7
+  m_fontSize: 146.85
   m_fontSizeBase: 160.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4085,8 +4300,8 @@ MonoBehaviour:
   m_text: The Crab robots will go after your base close range, while the Scorpion
     robots will attack your player with ranged attacks.  ------->
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4110,13 +4325,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 165.4
+  m_fontSize: 185.5
   m_fontSizeBase: 160.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 186.7
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4621,6 +4836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582191958927231054, guid: ac5c6c7edd6cfb641adf55260268f46b,
+        type: 3}
+      propertyPath: m_Name
+      value: TryAgain
       objectReference: {fileID: 0}
     - target: {fileID: 8582191958927231056, guid: ac5c6c7edd6cfb641adf55260268f46b,
         type: 3}
