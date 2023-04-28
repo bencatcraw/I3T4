@@ -12,7 +12,23 @@ public class HeatSystem : MonoBehaviour
     public float heat;
     public float repairAmt = 5;
     public Turret turret;
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        GameManager.OnGameStateChanged += GameManagerOnOnGameStateChanged;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManagerOnOnGameStateChanged;
+    }
+    private void GameManagerOnOnGameStateChanged(GameManager.GameState state)
+    {
+        if (state == GameManager.GameState.Morning)
+        {
+            heat = maxHeat;
+        }
+    }
     private void Start()
     {
         heat = maxHeat;

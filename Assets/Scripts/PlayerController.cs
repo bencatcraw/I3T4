@@ -74,8 +74,8 @@ public class PlayerController : MonoBehaviour
             gameOver.enabled = true;
         }
         healthbar.fillAmount = health / maxHealth;
-        TitaniumText.text = "Titanium: " + Titanium;
-        ScrapText.text = "Scrap Metal: " + ScrapMetal;
+        TitaniumText.text = ": " + Titanium;
+        ScrapText.text = ": " + ScrapMetal;
     }
     void Hurt()
     {

@@ -24,7 +24,10 @@ public class GameManager : MonoBehaviour
     public Volume volume;
     private GameObject[] ores;
     private int dayCounter = 0;
+    public GameObject buildingCosts;
     public TMPro.TextMeshProUGUI statusText;
+    public TMPro.TextMeshProUGUI objective;
+    public Animator DayCycle;
     private void Awake()
     {
         Instance = this;
@@ -78,6 +81,8 @@ public class GameManager : MonoBehaviour
             case GameState.Morning:
                 dayCounter += 1;
                 statusText.text = "Morning: " + dayCounter;
+                objective.text = "(Gather Resources)";
+                DayCycle.Play("ShowDayAndObjective");
                 action.Stop();
                 night.Stop();
                 trong.Play();
@@ -92,6 +97,9 @@ public class GameManager : MonoBehaviour
                     break;
             case GameState.Afternoon:
                 statusText.text = "Afternoon: " + dayCounter;
+                objective.text = "(Build Defenses)";
+                DayCycle.Play("ShowDayAndObjective");
+                buildingCosts.SetActive(true);
                 foreach (GameObject ore in ores)
                 {
                     ore.SetActive(false);
@@ -101,7 +109,10 @@ public class GameManager : MonoBehaviour
                 col.postExposure.value = 0;
                     break;
             case GameState.Night:
+                buildingCosts.SetActive(false);
                 statusText.text = "Night: " + dayCounter;
+                objective.text = "(Survive!)";
+                DayCycle.Play("ShowDayAndObjective");
                 agogo.Stop();
                 if (Random.Range(0, 2) == 0)
                 {
