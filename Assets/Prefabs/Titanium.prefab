@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 3547151631115087426}
   - component: {fileID: 3547151631115087429}
   - component: {fileID: 3547151631115087428}
-  - component: {fileID: 3547151631115087431}
+  - component: {fileID: -5586495369295566984}
   m_Layer: 0
   m_Name: Titanium
   m_TagString: Titanium
@@ -256,7 +256,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.017266441, y: 0.017266437, z: 0.017266434}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3547151631115087431
+--- !u!114 &-5586495369295566984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,9 +269,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResourceType: Titanium
-  dist: 50
-  oreAmt: 1
-  oreMax: 0
+  dist: 0
+  oreAmt: 3
+  oreMax: 3
   oreBar: {fileID: 3547151630739797515}
 --- !u!1 &3547151631387530314
 GameObject:

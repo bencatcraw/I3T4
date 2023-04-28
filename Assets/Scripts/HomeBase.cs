@@ -27,6 +27,7 @@ public class HomeBase : MonoBehaviour
         if (health <= 0)
         {
             gameOver.enabled = true;
+            Time.timeScale = 0;
             Destroy(hbase);
         }
         healthbar.fillAmount = health / maxHealth;

@@ -33,15 +33,29 @@ public class Bullet : MonoBehaviour
     void HitTarget()
     {
         GameObject effectIns = Instantiate(impactEffect, transform.position, transform.rotation);
+        if (target.GetComponent<RangedEnemy>() != null)
+        {
+            target.GetComponent<RangedEnemy>().health -= damage;
+            Destroy(this.gameObject);
+            return;
+        }
+        if (target.GetComponentInParent<RangedEnemy>() != null)
+        {
+            target.GetComponentInParent<RangedEnemy>().health -= damage;
+            Destroy(this.gameObject);
+            return;
+        }
         if (target.GetComponent<EnemyController>() != null)
         {
             target.GetComponent<EnemyController>().health -= damage;
             Destroy(this.gameObject);
+            return;
         }
-        else if (target.GetComponent<RangedEnemy>() != null)
+        if (target.GetComponentInParent<EnemyController>() != null)
         {
-            target.GetComponent<RangedEnemy>().health -= damage;
+            target.GetComponentInParent<EnemyController>().health -= damage;
             Destroy(this.gameObject);
+            return;
         }
         else
         {

@@ -8,7 +8,7 @@ public class ResourceManager : MonoBehaviour
     private bool inRange;
     private GameObject player;
     public float dist;
-    public float oreAmt = 3f;
+    public float oreAmt;
     public float oreMax;
     public Image oreBar;
     private void Start()

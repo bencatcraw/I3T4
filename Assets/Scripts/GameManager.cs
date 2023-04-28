@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public GameObject buildingCosts;
     public TMPro.TextMeshProUGUI statusText;
     public TMPro.TextMeshProUGUI objective;
+    public GameObject advanceDay;
     public Animator DayCycle;
     private void Awake()
     {
@@ -80,8 +81,9 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Morning:
                 dayCounter += 1;
-                statusText.text = "Morning: " + dayCounter;
+                statusText.text = "Morning " + dayCounter;
                 objective.text = "(Gather Resources)";
+                advanceDay.SetActive(true);
                 DayCycle.Play("ShowDayAndObjective");
                 action.Stop();
                 night.Stop();
@@ -96,7 +98,7 @@ public class GameManager : MonoBehaviour
                     EnemySpawner.SetActive(false);
                     break;
             case GameState.Afternoon:
-                statusText.text = "Afternoon: " + dayCounter;
+                statusText.text = "Afternoon " + dayCounter;
                 objective.text = "(Build Defenses)";
                 DayCycle.Play("ShowDayAndObjective");
                 buildingCosts.SetActive(true);
@@ -110,7 +112,8 @@ public class GameManager : MonoBehaviour
                     break;
             case GameState.Night:
                 buildingCosts.SetActive(false);
-                statusText.text = "Night: " + dayCounter;
+                advanceDay.SetActive(false);
+                statusText.text = "Night " + dayCounter;
                 objective.text = "(Survive!)";
                 DayCycle.Play("ShowDayAndObjective");
                 agogo.Stop();
