@@ -2273,7 +2273,7 @@ PrefabInstance:
     - target: {fileID: 1249789408178229625, guid: 49a4eb4d0dd5edf4ab2295e83841c7f5,
         type: 3}
       propertyPath: Titanium
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1249789408178229625, guid: 49a4eb4d0dd5edf4ab2295e83841c7f5,
         type: 3}
@@ -2293,7 +2293,7 @@ PrefabInstance:
     - target: {fileID: 1249789408178229625, guid: 49a4eb4d0dd5edf4ab2295e83841c7f5,
         type: 3}
       propertyPath: ScrapMetal
-      value: 5
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1249789408178229625, guid: 49a4eb4d0dd5edf4ab2295e83841c7f5,
         type: 3}

@@ -101,10 +101,14 @@ public class Tile : MonoBehaviour
         {
             if(turretIns != null)
             {
+                player.GetComponent<PlayerController>().Titanium += TurrCostTitanium;
+                player.GetComponent<PlayerController>().ScrapMetal += TurrCostScrap;
                 Destroy(turretIns);
             }
             else if (trapIns != null)
             {
+                player.GetComponent<PlayerController>().Titanium += TrapCostTitanium;
+                player.GetComponent<PlayerController>().ScrapMetal += TrapCostScrap;
                 Destroy(trapIns);
             }
 
