@@ -827,7 +827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 171.29999}
+  m_AnchoredPosition: {x: 85.3, y: 187.95}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1319172376805887780
@@ -930,7 +930,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3463075130377654036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -244.17, y: -253, z: 0}
+  m_LocalPosition: {x: -167.9, y: -273.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1111,7 +1111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 460.4, y: -199}
+  m_AnchoredPosition: {x: 370.6, y: -213.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3463075130686554666
@@ -1577,7 +1577,7 @@ GameObject:
   - component: {fileID: 3463075131179644196}
   - component: {fileID: 3463075131179644194}
   - component: {fileID: 3463075131179644197}
-  - component: {fileID: 7287958206536404243}
+  - component: {fileID: 1863764037}
   m_Layer: 5
   m_Name: Day/Night Cycle
   m_TagString: Untagged
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1704,7 +1704,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!95 &7287958206536404243
+--- !u!95 &1863764037
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
