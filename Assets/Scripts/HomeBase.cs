@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,11 @@ public class HomeBase : MonoBehaviour
     public float maxHealth;
     public Image healthbar;
 
+    
+
     public Canvas gameOver;
     [SerializeField] private GameObject hbase;
-    // Start is called before the first frame update
+
     void Start()
     {
         maxHealth = health;
@@ -31,5 +34,15 @@ public class HomeBase : MonoBehaviour
             Destroy(hbase);
         }
         healthbar.fillAmount = health / maxHealth;
+    }
+    public void Repair()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if(player.GetComponent<PlayerController>().ScrapMetal >= 100)
+        {
+            player.GetComponent<PlayerController>().ScrapMetal -= 100;
+            health = maxHealth;
+        }
+        
     }
 }

@@ -766,7 +766,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 4588556613974565924}
   ableToShoot: 1
-  range: 75
+  range: 100
   rotateSpeed: 5
   fireRate: 1
   turShoot: {fileID: 5672109379946509767}

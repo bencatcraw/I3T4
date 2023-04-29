@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,23 @@ public class trap : MonoBehaviour
     Animator animator;
     public float dist;
     bool closed = false;
+    void Awake()
+    {
+        GameManager.OnGameStateChanged += GameManagerOnOnGameStateChanged;
+    }
+
+    private void GameManagerOnOnGameStateChanged(GameManager.GameState state)
+    {
+        if (state == GameManager.GameState.Morning)
+        {
+            resetTrap();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManagerOnOnGameStateChanged;
+    }
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -34,10 +52,7 @@ public class trap : MonoBehaviour
         {
             if(closed == true)
             {
-                animator.SetBool("resetting", true);
-                animator.SetBool("triggered", false);
-                closed = false;
-                
+                resetTrap();
             }
         }
     }
@@ -52,5 +67,11 @@ public class trap : MonoBehaviour
         {
             inRange = false;
         }
+    }
+    void resetTrap()
+    {
+        animator.SetBool("resetting", true);
+        animator.SetBool("triggered", false);
+        closed = false;
     }
 }

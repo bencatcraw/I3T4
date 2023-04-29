@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
                 dayCounter += 1;
                 statusText.text = "Morning " + dayCounter;
                 objective.text = "(Gather Resources)";
-                survived.text = "You survived " + dayCounter + " nights";
+                survived.text = "You lost on night " + dayCounter;
                 advanceDay.SetActive(true);
                 DayCycle.Play("ShowDayAndObjective");
                 action.Stop();

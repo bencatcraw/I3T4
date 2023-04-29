@@ -11,21 +11,20 @@ public class Turret : MonoBehaviour
     public Transform rotatable;
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public bool ableToShoot = true;
     [Header("Attributes")]
     public float range = 15f;
     public float rotateSpeed = 5f;
     public float fireRate = 1f;
     private float fireCount = 0f;
     private Quaternion defRotation;
-
+    private Upgrades upgrades;
     [SerializeField] private AudioSource turShoot;
     
 
     private void Start()
     {
         defRotation = rotatable.transform.rotation;
-        
+        upgrades = GameObject.FindGameObjectWithTag("GameController").GetComponent<Upgrades>();
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         
     }
@@ -51,9 +50,7 @@ public class Turret : MonoBehaviour
     }
     private void Update()
     {
-        if (ableToShoot == true)
-        {
-
+        fireRate = upgrades.turretFireRate;
             if (target == null)
             {
                 Vector3 idle = Quaternion.Lerp(rotatable.rotation, defRotation, Time.deltaTime * rotateSpeed).eulerAngles;
@@ -74,7 +71,6 @@ public class Turret : MonoBehaviour
 
 
             fireCount -= Time.deltaTime;
-        }
         if (this.gameObject.GetComponent<HeatSystem>() != null && this.gameObject.GetComponent<HeatSystem>().heat <= 0)
         {
             Destroy(this.gameObject);

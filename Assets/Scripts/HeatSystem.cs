@@ -10,8 +10,9 @@ public class HeatSystem : MonoBehaviour
     private GameObject player;
     public float maxHeat = 100;
     public float heat;
-    public float repairAmt = 5;
+    public float repairAmt;
     public Turret turret;
+    private Upgrades upgrades;
 
     void Awake()
     {
@@ -31,6 +32,7 @@ public class HeatSystem : MonoBehaviour
     }
     private void Start()
     {
+        upgrades = GameObject.FindGameObjectWithTag("GameController").GetComponent<Upgrades>();
         heat = maxHeat;
         player = GameObject.FindGameObjectWithTag("Player");
         turret = this.gameObject.GetComponent<Turret>();
@@ -39,7 +41,9 @@ public class HeatSystem : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        UpdateOverheat(maxHeat, heat);
+        maxHeat = upgrades.turretMaxHeat;
+        repairAmt = player.GetComponent<PlayerController>().repairAmt;
+        UpdateOverheat();
         dist = Vector3.Distance(player.transform.position, transform.position);
         if (dist <= 30)
         {
@@ -58,15 +62,11 @@ public class HeatSystem : MonoBehaviour
             heat += repairAmt;
         }
     }
-    public void UpdateOverheat(float maxHeat, float heat)
+    public void UpdateOverheat()
     {
-        if (heat <= 0)
+        if(heat > maxHeat)
         {
-            turret.ableToShoot = false;
-        }
-        else
-        {
-            turret.ableToShoot = true;
+            heat = maxHeat;
         }
         overheatBar.fillAmount = heat / maxHeat;
     }

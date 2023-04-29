@@ -7,7 +7,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private GameObject highlight, turHigh, trapHigh, defHigh, delHigh;
     public GameObject turret, trap;
     public int selected;
-    private bool placed;
+    private bool isPlaced;
     private GameObject trapIns;
     private GameObject turretIns;
     private GameObject player;
@@ -22,11 +22,14 @@ public class Tile : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && selected != 1 && placed == false)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && selected != 1)
         {
-            highlight.SetActive(false);
-            selected = 1;
-            highlight = turHigh;
+            if (isPlaced == false)
+            {
+                highlight.SetActive(false);
+                selected = 1;
+                highlight = turHigh;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -34,11 +37,15 @@ public class Tile : MonoBehaviour
             selected = 0;
             highlight = defHigh;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && selected != 2 && placed == false)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && selected != 2 )
         {
-            highlight.SetActive(false);
-            selected = 2;
-            highlight = trapHigh;
+            if(isPlaced == false)
+            {
+                highlight.SetActive(false);
+                selected = 2;
+                highlight = trapHigh;
+            }
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -59,6 +66,7 @@ public class Tile : MonoBehaviour
             highlight = defHigh;
         }
 
+
     }
     private void OnMouseOver()
     {
@@ -70,7 +78,9 @@ public class Tile : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 1)
         {
-            if (player.GetComponent<PlayerController>().Titanium >= TurrCostTitanium && player.GetComponent<PlayerController>().ScrapMetal >= TurrCostScrap) {
+            if (player.GetComponent<PlayerController>().Titanium >= TurrCostTitanium && player.GetComponent<PlayerController>().ScrapMetal >= TurrCostScrap) 
+            {
+                
                 player.GetComponent<PlayerController>().Titanium -= TurrCostTitanium;
                 player.GetComponent<PlayerController>().ScrapMetal -= TurrCostScrap;
                 turretIns = Instantiate(turret, highlight.transform.position, highlight.transform.rotation);
@@ -79,13 +89,14 @@ public class Tile : MonoBehaviour
                 highlight.SetActive(false);
                 highlight = defHigh;
                 highlight.SetActive(true);
-                placed = true;
+                isPlaced = true;
             }
         }
         if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 2)
         {
             if (player.GetComponent<PlayerController>().Titanium >= TrapCostTitanium && player.GetComponent<PlayerController>().ScrapMetal >= TrapCostScrap)
             {
+                isPlaced = true;
                 player.GetComponent<PlayerController>().Titanium -= TrapCostTitanium;
                 player.GetComponent<PlayerController>().ScrapMetal -= TrapCostScrap;
                 trapIns = Instantiate(trap, highlight.transform.position, highlight.transform.rotation);
@@ -94,31 +105,38 @@ public class Tile : MonoBehaviour
                 highlight.SetActive(false);
                 highlight = defHigh;
                 highlight.SetActive(true);
-                placed = true;
+                isPlaced = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 3)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && selected == 3 && isPlaced == true)
         {
             if(turretIns != null)
             {
                 player.GetComponent<PlayerController>().Titanium += TurrCostTitanium;
                 player.GetComponent<PlayerController>().ScrapMetal += TurrCostScrap;
                 Destroy(turretIns);
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                isPlaced = false;
             }
             else if (trapIns != null)
             {
                 player.GetComponent<PlayerController>().Titanium += TrapCostTitanium;
                 player.GetComponent<PlayerController>().ScrapMetal += TrapCostScrap;
                 Destroy(trapIns);
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                isPlaced = false;
             }
 
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            placed = false;
+            
         }
-        if (placed = true && turretIns == null && trapIns == null)
+        if (turretIns == null && trapIns == null)
         {
-            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            placed = false;
+            if (isPlaced)
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                isPlaced = false;
+            }
+            
         }
 
     }

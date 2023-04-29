@@ -12,13 +12,17 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody rb;
     public float moveSpeed;
+    public float sprintSpeed;
+    private float defSpeed;
 
     public Vector2 moveInput;
 
     private Animator animator;
+    private float animatorSprint;
 
     public int Titanium = 0;
     public int ScrapMetal = 0;
+    public float repairAmt = 5;
     [SerializeField]
     private TMPro.TextMeshProUGUI TitaniumText;
     [SerializeField]
@@ -36,6 +40,8 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         maxHealth = PlayerHealth;
+        defSpeed = moveSpeed;
+        animatorSprint = animator.speed += 0.05f;
     }
 
     // Update is called once per frame
@@ -64,6 +70,16 @@ public class PlayerController : MonoBehaviour
         
         animator.SetFloat("X", moveInput.x);
         animator.SetFloat("Y", moveInput.y);
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = sprintSpeed;
+            animator.speed = animatorSprint;
+        }
+        else
+        {
+            moveSpeed = defSpeed;
+            animator.speed = 1;
+        }
     }
     public void UpdateHealth(float maxHealth, float health)
     {
