@@ -133,5 +133,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dist: 0
-  maxDist: 15
+  maxDist: 17
   damaged: 0

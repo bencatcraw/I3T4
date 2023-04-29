@@ -37,25 +37,11 @@ public class Bullet : MonoBehaviour
         {
             target.GetComponent<RangedEnemy>().health -= damage;
             Destroy(this.gameObject);
-            return;
-        }
-        if (target.GetComponentInParent<RangedEnemy>() != null)
-        {
-            target.GetComponentInParent<RangedEnemy>().health -= damage;
-            Destroy(this.gameObject);
-            return;
         }
         if (target.GetComponent<EnemyController>() != null)
         {
             target.GetComponent<EnemyController>().health -= damage;
             Destroy(this.gameObject);
-            return;
-        }
-        if (target.GetComponentInParent<EnemyController>() != null)
-        {
-            target.GetComponentInParent<EnemyController>().health -= damage;
-            Destroy(this.gameObject);
-            return;
         }
         else
         {

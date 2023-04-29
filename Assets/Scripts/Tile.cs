@@ -115,6 +115,11 @@ public class Tile : MonoBehaviour
             this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
             placed = false;
         }
+        if (placed = true && turretIns == null && trapIns == null)
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            placed = false;
+        }
 
     }
     void OnMouseExit()

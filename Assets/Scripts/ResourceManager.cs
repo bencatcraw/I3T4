@@ -8,8 +8,9 @@ public class ResourceManager : MonoBehaviour
     private bool inRange;
     private GameObject player;
     public float dist;
-    public float oreAmt;
-    public float oreMax;
+    public int oreGet = 1;
+    public float oreAmt = 5;
+    public float oreMax = 5;
     public Image oreBar;
     private void Start()
     {
@@ -27,7 +28,7 @@ public class ResourceManager : MonoBehaviour
             }
             if (ResourceType == "Titanium")
             {
-                player.GetComponent<PlayerController>().Titanium += 1;
+                player.GetComponent<PlayerController>().Titanium += oreGet;
                 oreAmt -= 1;
             }
         }
@@ -56,5 +57,14 @@ public class ResourceManager : MonoBehaviour
         }
         else
         oreBar.fillAmount = curOre / maxOre;
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if(ResourceType == "Scrap" && collision.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
+            player.GetComponent<PlayerController>().ScrapMetal += 1;
+        }
     }
 }

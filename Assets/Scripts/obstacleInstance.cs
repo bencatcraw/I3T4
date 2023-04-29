@@ -19,7 +19,7 @@ public class obstacleInstance : MonoBehaviour
     private void Update()
     {
         dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist <= maxDist && Time.time >= enterTime + 1.9f && damaged == false)
+        if (dist <= maxDist && Time.time >= enterTime + 1.4f && damaged == false)
         {
             damaged = true;
             player.GetComponent<PlayerController>().PlayerHealth -= damage;

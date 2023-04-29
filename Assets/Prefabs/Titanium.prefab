@@ -166,8 +166,8 @@ GameObject:
   - component: {fileID: 3547151631115087427}
   - component: {fileID: 3547151631115087426}
   - component: {fileID: 3547151631115087429}
-  - component: {fileID: 3547151631115087428}
-  - component: {fileID: -5586495369295566984}
+  - component: {fileID: 8712595240145172502}
+  - component: {fileID: 7694922805422039687}
   m_Layer: 0
   m_Name: Titanium
   m_TagString: Titanium
@@ -243,20 +243,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3547151631115087428
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3547151631115087430}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.017266441, y: 0.017266437, z: 0.017266434}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5586495369295566984
+--- !u!114 &8712595240145172502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,9 +257,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResourceType: Titanium
   dist: 0
+  oreGet: 0
   oreAmt: 3
   oreMax: 3
   oreBar: {fileID: 3547151630739797515}
+--- !u!64 &7694922805422039687
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547151631115087430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2363929930344542913, guid: f564bbb8594c8b1439f542a7182f28b7, type: 3}
 --- !u!1 &3547151631387530314
 GameObject:
   m_ObjectHideFlags: 0

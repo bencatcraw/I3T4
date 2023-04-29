@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
 
     public Transform target;
     private Vector3 moveDir;
+    private Collider lastColl;
 
     public float maxHealth = 15.0f;
     public float health;
@@ -29,6 +30,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (moveable == true)
         {
 
@@ -50,7 +52,7 @@ public class EnemyController : MonoBehaviour
     {
         if (health <= 0)
         {
-            Instantiate(deadBody, transform.position, transform.rotation);
+            Instantiate(deadBody, new Vector3(transform.position.x, 6f, transform.position.z), transform.rotation);
             Destroy(this.gameObject);
         }
         healthbar.fillAmount = health / maxHealth;
@@ -65,6 +67,14 @@ public class EnemyController : MonoBehaviour
                 target.GetComponent<HomeBase>().health -= damage;
             }
             atkTime = 0;
+        }
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "turret" && lastColl != other.collider)
+        {
+            lastColl = other.collider;
+            rb.velocity = new Vector3(0, 8f * moveSpeed, 0);
         }
     }
 }

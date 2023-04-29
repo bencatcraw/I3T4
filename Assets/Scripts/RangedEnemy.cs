@@ -86,8 +86,8 @@ public class RangedEnemy : MonoBehaviour
             laserCharge.Play();
             renderer.SetPosition(1, pos);
             GameObject obstacleIns = Instantiate(obstacle, pos, Quaternion.identity);
-            Destroy(obstacleIns, 2f);
-            Invoke("stayStill", 2f);
+            Destroy(obstacleIns, 1.5f);
+            Invoke("stayStill", 1.5f);
             
         }
 
@@ -117,7 +117,7 @@ public class RangedEnemy : MonoBehaviour
     {
         if (health <= 0)
         {
-            Instantiate(deadBody, transform.position, transform.rotation);
+            Instantiate(deadBody, new Vector3(transform.position.x, 6f, transform.position.z), transform.rotation);
             Destroy(this.gameObject);
         }
         healthbar.fillAmount = health / maxHealth;

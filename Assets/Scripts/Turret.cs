@@ -75,6 +75,10 @@ public class Turret : MonoBehaviour
 
             fireCount -= Time.deltaTime;
         }
+        if (this.gameObject.GetComponent<HeatSystem>() != null && this.gameObject.GetComponent<HeatSystem>().heat <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
     void Shoot()
     {

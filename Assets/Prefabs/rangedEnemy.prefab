@@ -1,51 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &669303124293860870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1468808414713045965}
-  - component: {fileID: 3676649032041050373}
-  m_Layer: 0
-  m_Name: collider
-  m_TagString: enemy
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1468808414713045965
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669303124293860870}
-  m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6418296398819904319}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
---- !u!136 &3676649032041050373
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669303124293860870}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.75
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2627689559636428896
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6418296398819904319}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5352331245926126461
 GameObject:
@@ -106,7 +60,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6418296398819904319}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5459818565911731991
 GameObject:
@@ -137,7 +91,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6418296398819904319}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5945395362651212056
 GameObject:
@@ -168,7 +122,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6418296398819904319}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6418296398014899740
 GameObject:
@@ -473,6 +427,7 @@ GameObject:
   - component: {fileID: 8624896615980739977}
   - component: {fileID: 4429280919954022369}
   - component: {fileID: 2655659228189028229}
+  - component: {fileID: 7597633857648209635}
   m_Layer: 0
   m_Name: rangedEnemy
   m_TagString: enemy
@@ -494,7 +449,6 @@ Transform:
   m_Children:
   - {fileID: 6418296398251876072}
   - {fileID: 6418296398587156156}
-  - {fileID: 1468808414713045965}
   - {fileID: 3815846199556950293}
   - {fileID: 2165249627941939703}
   - {fileID: 4424821472924186580}
@@ -595,7 +549,7 @@ MonoBehaviour:
   maxHealth: 30
   health: 0
   maxDist: 100
-  fireRate: 5
+  fireRate: 3
   healthbar: {fileID: 6418296398450891202}
   downLeftSpawn: {fileID: 3815846199556950293}
   downRightSpawn: {fileID: 2165249627941939703}
@@ -912,3 +866,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &7597633857648209635
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418296398819904312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.8275775
+  m_Height: 7.96
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5199999, z: 0.9224225}
