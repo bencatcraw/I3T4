@@ -476,6 +476,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5672109379946509767, guid: aa4a8208e09f9b248a64836e9c035572,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.016
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa4a8208e09f9b248a64836e9c035572, type: 3}
 --- !u!1001 &136362523
@@ -670,9 +675,10 @@ GameObject:
   - component: {fileID: 192199853}
   - component: {fileID: 192199852}
   - component: {fileID: 192199854}
+  - component: {fileID: 192199855}
   m_Layer: 0
   m_Name: Menu
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -802,6 +808,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &192199855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192199851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26162f908f5f4242ba2dd2befa55245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeButton: {fileID: 1532484171}
+  turretMaxHeat: 100
+  turretFireRate: 1
 --- !u!114 &329610051 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 438247145212082025, guid: fddcc5071da016542bc689bde2f4bdd1,
@@ -3907,6 +3928,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1532484171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1400857533, guid: 50a4f4bb0890ed34ebe00ecdd63ca2c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1685773821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1550270537
 GameObject:
   m_ObjectHideFlags: 0
