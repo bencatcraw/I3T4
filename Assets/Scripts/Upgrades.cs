@@ -50,6 +50,11 @@ public class Upgrades : MonoBehaviour
         {
             player.GetComponent<PlayerController>().ScrapMetal -= 50;
             turretMaxHeat += 10;
+            GameObject[] currentTurrets = GameObject.FindGameObjectsWithTag("turret");
+            foreach (var turret in currentTurrets)
+            {
+                turret.GetComponent<HeatSystem>().heat = turretMaxHeat;
+            }
         }
     }
     public void UpgradeFireRate()
