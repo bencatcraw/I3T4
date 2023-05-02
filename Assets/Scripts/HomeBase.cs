@@ -8,7 +8,6 @@ public class HomeBase : MonoBehaviour
     public float health = 200f;
     public float maxHealth;
     public Image healthbar;
-
     
 
     public Canvas gameOver;
@@ -31,7 +30,7 @@ public class HomeBase : MonoBehaviour
         {
             gameOver.enabled = true;
             Time.timeScale = 0;
-            Destroy(hbase);
+            Destroy(hbase);  
         }
         healthbar.fillAmount = health / maxHealth;
     }

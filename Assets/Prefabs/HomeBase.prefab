@@ -443,6 +443,7 @@ MonoBehaviour:
   health: 200
   maxHealth: 0
   healthbar: {fileID: 4588556612409650094}
+  blowup: {fileID: 0}
   gameOver: {fileID: 0}
   hbase: {fileID: 8678931438722613244}
 --- !u!65 &4588556613775486944
@@ -765,7 +766,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8041674599686630781, guid: 131fc39495e9cda47b073908b67a3b27,
     type: 3}
   firePoint: {fileID: 4588556613974565924}
-  ableToShoot: 1
   range: 100
   rotateSpeed: 5
   fireRate: 1

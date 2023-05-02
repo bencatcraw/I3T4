@@ -12,10 +12,14 @@ public class ResourceManager : MonoBehaviour
     public float oreAmt = 5;
     public float oreMax = 5;
     public Image oreBar;
+    public AudioSource pickup;
+    public AudioSource mine;
     private void Start()
     {
         oreMax = oreAmt;
         player = GameObject.FindGameObjectWithTag("Player");
+        mine = GameObject.Find("Mine").GetComponent<AudioSource>();
+        pickup = GameObject.Find("Pickup").GetComponent<AudioSource>();
     }
     private void OnMouseOver()
     {
@@ -25,11 +29,13 @@ public class ResourceManager : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 player.GetComponent<PlayerController>().ScrapMetal += 1;
+                pickup.Play();
             }
             if (ResourceType == "Titanium")
             {
                 player.GetComponent<PlayerController>().Titanium += oreGet;
                 oreAmt -= 1;
+                mine.Play();
             }
         }
     }
@@ -63,8 +69,10 @@ public class ResourceManager : MonoBehaviour
     {
         if(ResourceType == "Scrap" && collision.gameObject.tag == "Player")
         {
+            pickup.Play();
             Destroy(this.gameObject);
             player.GetComponent<PlayerController>().ScrapMetal += 1;
+            
         }
     }
 }

@@ -13,7 +13,7 @@ public class HeatSystem : MonoBehaviour
     public float repairAmt;
     public Turret turret;
     private Upgrades upgrades;
-
+    AudioSource mine;
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnOnGameStateChanged;
@@ -36,6 +36,7 @@ public class HeatSystem : MonoBehaviour
         heat = maxHeat;
         player = GameObject.FindGameObjectWithTag("Player");
         turret = this.gameObject.GetComponent<Turret>();
+        mine = GameObject.Find("Mine").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,6 +60,7 @@ public class HeatSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && inRange == true)
         {
+            mine.Play();
             heat += repairAmt;
         }
     }
