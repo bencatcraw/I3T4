@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thats it for the tutorial. Press ESC to play or return to the main menu.
+  m_text: Thats it for the tutorial. Press P to play or return to the main menu.
     Good luck!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -5030,6 +5030,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463075130889628532, guid: 50a4f4bb0890ed34ebe00ecdd63ca2c5,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463075130889628532, guid: 50a4f4bb0890ed34ebe00ecdd63ca2c5,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463075130889628532, guid: 50a4f4bb0890ed34ebe00ecdd63ca2c5,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463075130889628532, guid: 50a4f4bb0890ed34ebe00ecdd63ca2c5,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 620
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463075130889628533, guid: 50a4f4bb0890ed34ebe00ecdd63ca2c5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3463075130889628534, guid: 50a4f4bb0890ed34ebe00ecdd63ca2c5,
         type: 3}

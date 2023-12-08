@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        if (sceneName != "MainMenu" && Input.GetKeyDown(KeyCode.Escape))
+        if (sceneName != "MainMenu" && Input.GetKeyDown(KeyCode.P))
         {
             if(pause.enabled)
             {
